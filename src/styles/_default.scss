@@ -1,0 +1,24 @@
+@import './_variables';
+
+body {
+    font-family: $monut-font-family;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-size: $monut-text;
+}
+
+h1 {
+    font-size: $monut-h1;
+}
+
+h2 {
+    font-size: $monut-h2;
+}
+
+p {
+    font-size: $monut-text;
+}
