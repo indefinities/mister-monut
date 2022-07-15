@@ -1,21 +1,30 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+<template>
+  <v-app>
+    <v-main>
+      <monut-home />
+      <monut-info />
+      <monut-menu />
+      <monut-contact-us />
+    </v-main>
+  </v-app>
+</template>
+
+<script>
 import {
   monutHome,
   monutInfo,
   monutMenu,
-} from './sections/sections-export.js'
-</script>
+  monutContactUs,
+} from './sections/sections-export'
 
-<template>
-  <monut-home />
-  <monut-info />
-  <monut-menu />
-</template>
+export default {
+  name: 'App',
 
-<style>
-#app {
-  font-family: Avenir, sans-serif;
+  components: {
+    monutHome,
+    monutInfo,
+    monutMenu,
+    monutContactUs,
+  },
 }
-</style>
+</script>

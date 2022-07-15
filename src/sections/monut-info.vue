@@ -40,6 +40,9 @@ import {
     }
     &__hours {
         text-align: center;
+        padding-top: 150px;
+        padding-bottom: 50px;
+        background: no-repeat center url(../assets/store-sign.svg)
     }
 }
 </style>

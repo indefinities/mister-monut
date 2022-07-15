@@ -36,7 +36,7 @@ import {
 <style lang="scss" scoped>
 .monut-home {
   &__content {
-    margin-top: 30%;
+    margin-top: 10%;
   }
 
   &__logo {

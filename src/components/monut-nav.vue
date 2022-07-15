@@ -1,28 +1,38 @@
-<script setup>
-
-const isMenuOpen = false;
-
-function openMenu() {
-    isMenuOpen = true;
-}
-</script>
-
 <template>
     <div class="monut-nav">
-        <div @click="openMenu()"
-        class="monut-nav__icon">
-            <img src="../assets/menu.svg" />
-        </div>
+        <v-app-bar flat>
+            <v-app-bar-nav-icon variant="text" @click.stop="isMenuOpen = !isMenuOpen" />
+        </v-app-bar>
         
+        <v-navigation-drawer
+            v-model="isMenuOpen"
+            >
+            <v-list
+                nav
+                dense
+            >
+                <v-list-item-group v-model="group">
+                <v-list-item>
+                    <v-list-item-title>Foo</v-list-item-title>
+                </v-list-item>
+
+                </v-list-item-group>
+            </v-list>
+        </v-navigation-drawer>
     </div>
 </template>
 
-<style lang= "scss">
-.monut-nav {
-    
-    &__icon {
-        width: 50px;
-        margin: 3vh 0 0 3vw;
-    }
+<script>
+export default {
+data: () => ({
+    isMenuOpen: false,
+    group: null,
+}),
+
+watch: {
+    group () {
+    this.isMenuOpen = false
+    },
+},
 }
-</style>
+</script>
