@@ -11,14 +11,20 @@ import {
         <monut-page>
 
         <div class="monut-info__location">
-            <h2>Location</h2>
-            <p>873 Main Street</p>
-            <p>Waltham, MA</p>
-            <p>(781) 893 - 1809</p>
+            <span class="text-h3">Location</span>
+
+            <div class="monut-info__location--content">
+                <img src="../assets/map-location.png" />
+
+                <p>873 Main Street</p>
+                <p>Waltham, MA</p>
+                <p>(781) 893 - 1809</p>
+            </div>
+
         </div>
 
         <div class="monut-info__hours">
-            <h2>Hours of Operation</h2>
+            <span class="text-h6">Hours of Operation</span>
             <div>
                 <p>Mon & Tues - CLOSED</p>
                 <p>Wed & Thurs - 11AM - 7PM</p>
@@ -34,7 +40,13 @@ import {
 <style lang="scss">
 .monut-info {
     &__location {
-        p {
+
+        &--content {
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
             text-align: center;
         }
     }

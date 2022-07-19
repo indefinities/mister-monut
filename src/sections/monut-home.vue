@@ -16,13 +16,15 @@ import {
         <img src="../assets/logo-title.svg" />
       </div>
 
-      <div class="monut-home__insta">
-        <a href="https://www.instagram.com/mistermonut/" target="_blank">
-          <img src="../assets/instagram.svg" />
-        </a>
-      </div>
+      <v-btn
+      class="d-block mr-auto ml-auto mt-13 pt-4"
+      variant="outlined"
+      icon="mdi-instagram"
+      size="x-large"
+      href="https://www.instagram.com/mistermonut/"
+      ></v-btn>
 
-      <div class="monut-home__footer">
+      <div class="monut-home__footer pt-16 mt-16">
         <p><em>munch on a monut</em></p>
         <img 
         class="monut-home__footer__arrow" 
@@ -36,28 +38,23 @@ import {
 <style lang="scss" scoped>
 .monut-home {
   &__content {
-    margin-top: 10%;
+    margin-top: 15vh;
   }
 
   &__logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 250px;
-  }
+    width: 50%;
 
-  &__insta {
-    width: 60px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    @media only screen and (max-width: 595px) {
+      width: 300px;
+    }
+
   }
 
   &__footer {
     text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 
     &__arrow {
       position: absolute;

@@ -1,11 +1,9 @@
 <template>
   <v-app>
-    <v-main>
       <monut-home />
       <monut-info />
       <monut-menu />
       <monut-contact-us />
-    </v-main>
   </v-app>
 </template>
 

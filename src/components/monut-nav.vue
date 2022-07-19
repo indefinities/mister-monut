@@ -1,7 +1,7 @@
 <template>
     <div class="monut-nav">
         <v-app-bar flat>
-            <v-app-bar-nav-icon variant="text" @click.stop="isMenuOpen = !isMenuOpen" />
+            <v-app-bar-nav-icon @click.stop="isMenuOpen = !isMenuOpen" />
         </v-app-bar>
         
         <v-navigation-drawer
@@ -12,8 +12,8 @@
                 dense
             >
                 <v-list-item-group v-model="group">
-                <v-list-item>
-                    <v-list-item-title>Foo</v-list-item-title>
+                <v-list-item v-for="(item, index) in items">
+                    <span class="text-h5">{{ item.title }}</span>
                 </v-list-item>
 
                 </v-list-item-group>
@@ -27,6 +27,20 @@ export default {
 data: () => ({
     isMenuOpen: false,
     group: null,
+    items: [
+        {
+            title:'Home'
+        }, 
+        {
+            title:'Info'
+        },
+        {
+            title:'Menu'
+        },
+        {
+            title:'Contact Us'
+        },
+    ]
 }),
 
 watch: {

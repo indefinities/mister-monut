@@ -8,19 +8,57 @@ import {
 <template>
   <section class="monut-menu">
     <monut-page>
-      <h1>Weekly Flavors</h1>
-      <div class="monut-menu__flavor">
-        <v-card tonal width="350">
-          <v-card-text>
-              <v-card-title>
-                Strawberry 🍓
-              </v-card-title>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Nibh nunc maecenas volutpat facilisis ullamcorper risus, id et venenatis. 
-              </p>
-          </v-card-text>
-        </v-card>
+      <span class="text-h3">Weekly Flavors</span>
+
+      <div class="mt-5 d-flex flex-wrap justify-space-between">
+        <div class="monut-menu__flavor mb-5">
+          <v-card tonal width="350">
+            <img 
+            class="monut-menu__flavor--img"
+            src="../assets/croffle.png" />
+            
+                <v-card-title>
+                  Plain
+                </v-card-title>
+                <v-card-text>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Nibh nunc maecenas volutpat facilisis ullamcorper risus, id et venenatis. 
+                </v-card-text>
+          </v-card>
+        </div>
+
+        <div class="monut-menu__flavor mb-5">
+          <v-card tonal width="350">
+            <img 
+            class="monut-menu__flavor--img"
+            src="../assets/croffle.png" />
+            
+                <v-card-title>
+                  Strawberry 🍓
+                </v-card-title>
+                <v-card-text>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Nibh nunc maecenas volutpat facilisis ullamcorper risus, id et venenatis. 
+                </v-card-text>
+          </v-card>
+        </div>
+
+
+      <div class="monut-menu__flavor mb-5">
+          <v-card tonal width="350">
+            <img 
+            class="monut-menu__flavor--img"
+            src="../assets/croffle.png" />
+            
+                <v-card-title>
+                  Matcha 🍓
+                </v-card-title>
+                <v-card-text>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Nibh nunc maecenas volutpat facilisis ullamcorper risus, id et venenatis. 
+              </v-card-text>
+          </v-card>
+      </div>
 
       </div>
     </monut-page>
@@ -30,9 +68,9 @@ import {
 <style lang="scss" scoped>
 .monut-menu {
   &__flavor {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+    &--img {
+      width: 100%;
+    }
   }
 }
 </style>
