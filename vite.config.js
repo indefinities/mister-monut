@@ -6,8 +6,9 @@ import vuetify from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
+	plugins: [
 		vue(),
 		vuetify({ autoImport: true }),
-]
+	],
+	publicPath: process.env.NODE_ENV === "production" ? "/REPO_NAME/" : "/",
 })
