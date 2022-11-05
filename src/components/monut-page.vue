@@ -12,15 +12,8 @@
 
 <style lang= "scss">
 .monut-page {
-    margin-left: 20px;
-    margin-right: 20px;
     min-height: 90vh;
-
-    @media only screen and (min-width: 900px) {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 900px;
-    }
+    display: block;
+    margin: 10vh 10vw;
 }
 </style>

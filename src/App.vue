@@ -1,10 +1,10 @@
 <template>
-  <v-app>
+
       <monut-home />
       <monut-info />
       <monut-menu />
       <monut-contact-us />
-  </v-app>
+
 </template>
 
 <script>

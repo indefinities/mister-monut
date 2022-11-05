@@ -1,24 +1,10 @@
 <template>
     <div class="monut-nav">
-        <v-app-bar flat>
-            <v-app-bar-nav-icon @click.stop="isMenuOpen = !isMenuOpen" />
-        </v-app-bar>
-        
-        <v-navigation-drawer
-            v-model="isMenuOpen"
-            >
-            <v-list
-                nav
-                dense
-            >
-                <v-list-item-group v-model="group">
-                <v-list-item v-for="(item, index) in items">
-                    <span class="text-h5">{{ item.title }}</span>
-                </v-list-item>
-
-                </v-list-item-group>
-            </v-list>
-        </v-navigation-drawer>
+        <ul>
+            <li v-for="(item, index) in items" :key="index">
+                {{ item.title }}
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -42,11 +28,34 @@ data: () => ({
         },
     ]
 }),
-
-watch: {
-    group () {
-    this.isMenuOpen = false
-    },
-},
 }
 </script>
+
+<style lang="scss" scoped>
+.monut-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    font-size: 18pt;
+    padding-right: 20px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li {
+        float: left;
+        padding: 10px;
+    }
+
+    li a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+}
+</style>

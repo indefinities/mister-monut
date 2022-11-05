@@ -45,7 +45,7 @@ import {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 30vw;
 
     @media only screen and (max-width: 595px) {
       width: 300px;
