@@ -3,39 +3,40 @@
     <monut-page>
       <span class="text-h3">Weekly Flavors</span>
 
-      <h2>Monuts</h2>
+      <div class="mt-10">
+        <h2>Monuts</h2>
 
-      <div 
-      class="d-flex flex-wrap justify-start"
-      >
         <div 
-        class="monut-menu__flavor ma-5"
-        v-for="(monut, index) in monutFlavors" :key="index">
-          <v-card tonal :width="cardWidth">
-            <img 
-            class="monut-menu__flavor--img"
-            :src="imageSrc('monut-flavors', monut.file)" />
-            
-                <v-card-title>
-                  {{ monut.name }}
-                </v-card-title>
-                <v-card-text>
-                  {{ monut.desc }}
-                </v-card-text>
-          </v-card>
+        class="d-flex flex-wrap justify-start align-start"
+        >
+          <div 
+          class="monut-menu__flavor"
+          v-for="(monut, index) in monutFlavors" :key="index">
+            <v-card tonal :width="cardWidth">
+              <img 
+              class="monut-menu__flavor--img"
+              :src="imageSrc('monut-flavors', monut.file)" />
+              
+                  <v-card-title>
+                    {{ monut.name }}
+                  </v-card-title>
+                  <v-card-text>
+                    {{ monut.desc }}
+                  </v-card-text>
+            </v-card>
+          </div>
         </div>
-
-        
-
       </div>
 
 
-      <h2>Croffles</h2>
+
+  <div class="mt-10">
+    <h2>Croffles</h2>
       <div 
-      class="d-flex flex-wrap justify-start"
+      class="d-flex flex-wrap justify-start align-start"
       >
           <div 
-          class="monut-menu__flavor ma-5"
+          class="monut-menu__flavor"
           v-for="(croffle, index) in croffleFlavors" :key="index">
             <v-card tonal :width="cardWidth">
               <img 
@@ -51,6 +52,8 @@
             </v-card>
           </div>
         </div>
+  </div>
+      
     </monut-page>
   </section>
 </template>
@@ -70,7 +73,7 @@ export default {
   },
   data() {
     return {
-      cardWidth: 350,
+      cardWidth: 300,
       croffleFlavors,
       monutFlavors,
     }
@@ -86,7 +89,12 @@ export default {
 <style lang="scss" scoped>
 .monut-menu {
   &__flavor {
-    margin-top: 20vh;
+    margin: 5px;
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
     &--img {
       width: 100%;
     }

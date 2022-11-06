@@ -2,32 +2,32 @@ const monutFlavors = [
   {
     name: "Plain (Sugar)",
     file:"plain",
-    desc: "something",
+    desc: "A plain monut glazed with sugar.",
   },
   {
     name: "Matcha",
     file:"matcha",
-    desc: "green tea",
+    desc: "Green tea flavored glaze with a bittersweet taste.",
   },
   {
     name: "Black Sesame",
     file: "sesame",
-    desc: "sesame",
+    desc: "A slightly grainy flavors which adds texture.",
   },
   {
     name: "Ube/ Taro",
     file: "ube",
-    desc: "something",
+    desc: "Taro adds a sweet yam flavor to the monut.",
   },
   {
     name: "Strawberry Milk",
     file: "strawberry",
-    desc: "something",
+    desc: "This milky strawberry flavor will stimulate your taste buds.",
   },
   {
     name: "Cookies and Cream",
     file: "cookies",
-    desc: "something",
+    desc: "Do you like Oreos?",
   }
 ];
 

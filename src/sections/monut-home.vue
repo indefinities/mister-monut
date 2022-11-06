@@ -24,7 +24,7 @@ import {
       href="https://www.instagram.com/mistermonut/"
       ></v-btn>
 
-      <div class="monut-home__footer pt-16 mt-16">
+      <div class="monut-home__footer">
         <p><em>munch on a monut</em></p>
         <img 
         class="monut-home__footer__arrow" 
@@ -54,6 +54,7 @@ import {
   }
 
   &__footer {
+    margin-top: 5vh;
     text-align: center;
 
     &__arrow {
