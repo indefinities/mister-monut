@@ -15,7 +15,7 @@
             <v-card tonal :width="cardWidth">
               <img 
               class="monut-menu__flavor--img"
-              :src="imageSrc('monut-flavors', monut.file)" />
+              :src="imageSrc(monut.file)" />
               
                   <v-card-title>
                     {{ monut.name }}
@@ -41,7 +41,7 @@
             <v-card tonal :width="cardWidth">
               <img 
               class="monut-menu__flavor--img"
-              :src="imageSrc('croffle-flavors', croffle.file)" />
+              :src="imageSrc(croffle.file)" />
               
                   <v-card-title>
                     {{ croffle.name }}
@@ -79,8 +79,8 @@ export default {
     }
   },
   methods: {
-    imageSrc(folder, fileName) {
-      return new URL(`../assets/` + folder + `/` + fileName + `.jpg`, import.meta.url).href
+    imageSrc(fileName) {
+      return new URL(`../assets/` + fileName + `.jpg`, import.meta.url).href
     }
   }
 }
