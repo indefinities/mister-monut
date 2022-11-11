@@ -11,18 +11,24 @@ import monutPage from "../components/monut-page.vue";
           class="mt-5"
             label="Email"
             variant="outlined"
-          ></v-text-field>
+            prepend-inner-icon="mdi-at"
+            bg-color="white"
+          />
 
           <v-text-field
             label="Subject"
             variant="outlined"
-          ></v-text-field>
+            prepend-inner-icon="mdi-email-send"
+            bg-color="white"
+          />
 
           <v-textarea
-          outlined
+          variant="outlined"
           label="Message"
-          value=""
-        ></v-textarea>
+          bg-color="white"
+          counter
+          :value="message"
+        />
 
         <v-btn size="large" color="black">
           Submit
@@ -30,6 +36,17 @@ import monutPage from "../components/monut-page.vue";
     </monut-page>
   </section>
 </template>
+
+<script>
+export default {
+  name: 'monut-contact-us',
+  data() {
+    return {
+      message: ""
+    }
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .monut-contact-us {

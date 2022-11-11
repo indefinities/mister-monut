@@ -1,32 +1,32 @@
   const croffleFlavors = [
     {
-      name: 'Strawberry',
-      file: 'strawberry',
+      name: 'Rasberry and Blackberry',
+      file: 'raspberry-and-blackberry',
       desc: 'something',
     },
     {
-      name: 'Mango',
-      file: 'mango',
+      name: 'Biscuit',
+      file: 'biscuit',
       desc: 'something',
     },
     {
-      name: 'Blueberries',
+      name: 'Blueberry',
       file: 'blueberry',
-      desc: 'sesame',
+      desc: 'something',
     },
     {
-      name: 'Grape',
-      file: 'grape',
+      name: 'Matcha',
+      file: 'matcha',
       desc: 'something',
     },
     {
       name: 'Banana with Nutella',
-      file: 'banana',
+      file: 'nutella',
       desc: 'something',
     },
     {
-      name: 'Pesto',
-      file: 'pesto',
+      name: 'Cookies and Cream',
+      file: 'cookies-and-cream',
       desc: 'something',
     }
   ];

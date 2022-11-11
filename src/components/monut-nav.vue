@@ -2,7 +2,7 @@
     <div class="monut-nav">
         <ul>
             <li v-for="(item, index) in items" :key="index">
-                {{ item.title }}
+                <a :href="item.id">{{ item.title }}</a>
             </li>
         </ul>
     </div>
@@ -15,16 +15,20 @@ data: () => ({
     group: null,
     items: [
         {
-            title:'Home'
+            title:'Home',
+            id: '#home'
         }, 
         {
-            title:'Info'
+            title:'Info',
+            id: '#info'
         },
         {
-            title:'Menu'
+            title:'Menu',
+            id: '#menu'
         },
         {
-            title:'Contact Us'
+            title:'Contact Us',
+            id: '#contact-us'
         },
     ]
 }),
@@ -32,13 +36,18 @@ data: () => ({
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/base.scss';
 .monut-nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
     font-size: 18pt;
     padding-right: 20px;
+    background-color: $monut-bg-color;
 
     ul {
         list-style-type: none;
@@ -51,7 +60,8 @@ data: () => ({
         padding: 10px;
     }
 
-    li a {
+    a {
+        color: black;
         display: block;
         text-align: center;
         padding: 16px;
