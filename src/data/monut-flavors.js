@@ -6,7 +6,7 @@ const monutFlavors = [
   },
   {
     name: "Matcha",
-    file:"matcha-monut",
+    file:"matcha",
     desc: "Green tea flavored glaze with a bittersweet taste.",
   },
   {
