@@ -1,33 +1,33 @@
   const croffleFlavors = [
     {
-      name: 'Rasberry and Blackberry',
+      name: 'Raspberry and Blackberry',
       file: 'raspberry-and-blackberry',
-      desc: 'something',
+      desc: 'The combination of raspberries and blackberries and whipped cream adds a fruity flavor to the croffle.',
     },
     {
       name: 'Biscuit',
       file: 'biscuit',
-      desc: 'something',
+      desc: 'The sweetness and crunchiness of the buscuit adds texture to the croffle.',
     },
     {
       name: 'Blueberry',
       file: 'blueberry',
-      desc: 'something',
+      desc: 'The blueberries add a fruity flavor to the croffle.',
     },
     {
       name: 'Matcha',
       file: 'matcha',
-      desc: 'something',
+      desc: 'The matcha flavor adds a creamy green tea-esque flavor to the croffle.',
     },
     {
       name: 'Banana with Nutella',
       file: 'nutella',
-      desc: 'something',
+      desc: 'The combination of banana and nutella together add a mildly sweet chocolately banana flavor to the croffle.',
     },
     {
       name: 'Cookies and Cream',
       file: 'cookies-and-cream',
-      desc: 'something',
+      desc: 'The cookie sand cream adds a sweet cookie-like texture when eating the croffle.',
     }
   ];
   

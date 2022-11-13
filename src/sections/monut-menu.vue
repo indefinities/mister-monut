@@ -4,7 +4,7 @@
       <span class="text-h3">Weekly Flavors</span>
 
       <div class="mt-10">
-        <h2>Monuts</h2>
+        <h2>🍩 Monuts</h2>
 
         <div 
         class="d-flex flex-wrap justify-start align-start"
@@ -31,7 +31,7 @@
 
 
   <div class="mt-10">
-    <h2>Croffles</h2>
+    <h2>🧇 Croffles</h2>
       <div 
       class="d-flex flex-wrap justify-start align-start"
       >

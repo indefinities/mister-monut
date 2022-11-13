@@ -1,14 +1,6 @@
-<script setup>
-import {
-  monutNav,
-  monutPage,
-} from "../components/component-export.js";
-
-</script>
-
 <template>
   <section class="monut-home">
-    <monut-nav />
+    <monut-nav :is-mobile="isMobile" />
 
     <monut-page class="monut-home__content">
       <div class="monut-home__logo">
@@ -16,24 +8,53 @@ import {
         <img src="../assets/logo-title.svg" />
       </div>
 
-      <v-btn
-      class="d-block mr-auto ml-auto mt-13 pt-4"
-      variant="outlined"
-      icon="mdi-instagram"
-      size="x-large"
-      href="https://www.instagram.com/mistermonut/"
-      ></v-btn>
+      <!-- <v-btn
+        class="d-block mr-auto ml-auto mt-13 pt-4"
+        variant="outlined"
+        icon="mdi-instagram"
+        size="x-large"
+        href="https://www.instagram.com/mistermonut/"
+      ></v-btn> -->
 
       <div class="monut-home__footer">
         <p><em>munch on a monut</em></p>
-        <img 
-        class="monut-home__footer__arrow" 
-        src="../assets/arrow_drop_down.svg" />
+        <img
+          class="monut-home__footer__arrow"
+          src="../assets/arrow_drop_down.svg"
+        />
       </div>
     </monut-page>
-
   </section>
 </template>
+
+<script>
+import { monutNav, monutPage } from "../components/component-export.js";
+
+export default {
+  name: "monut-home",
+  components: {
+    monutNav,
+    monutPage,
+  },
+  data() {
+    return {
+      isMobile: false,
+    }
+  },
+  beforeMount() {
+    const breakpoint = window.matchMedia("( max-width: 710px )");
+    this.addQuery(breakpoint, (mq) => {
+      this.isMobile = mq.matches;
+    });
+  },
+  methods: {
+    addQuery(mq, callback) {
+      callback(mq);
+      mq.addListener(callback);
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .monut-home {
@@ -50,7 +71,6 @@ import {
     @media only screen and (max-width: 595px) {
       width: 300px;
     }
-
   }
 
   &__footer {
@@ -62,28 +82,28 @@ import {
       left: calc(50% - 30px);
       animation: jump-infinite 1.5s infinite;
 
-    &:after {
-      position: absolute;
-      top: 10px;
-      left: -10px;
-      transform: rotateZ(45deg);
+      &:after {
+        position: absolute;
+        top: 10px;
+        left: -10px;
+        transform: rotateZ(45deg);
+      }
     }
-  }
 
     @keyframes jump-infinite {
-    0% {
-      margin-top: 0;
-      opacity: 25%;
+      0% {
+        margin-top: 0;
+        opacity: 25%;
+      }
+      50% {
+        margin-top: 20px;
+        opacity: 100%;
+      }
+      100% {
+        margin-top: 0;
+        opacity: 25%;
+      }
     }
-    50% {
-      margin-top: 20px;
-      opacity: 100%;
-    }
-    100% {
-      margin-top: 0;
-      opacity: 25%;
-    }
-  }
   }
 }
 </style>

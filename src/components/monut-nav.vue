@@ -1,37 +1,51 @@
 <template>
     <div class="monut-nav">
-        <ul>
-            <li v-for="(item, index) in items" :key="index">
-                <a :href="item.id">{{ item.title }}</a>
-            </li>
-        </ul>
+        <div v-if="isMobile" class="monut-nav__mobile">
+            <v-icon icon="mdi-menu" size="x-large" />
+        </div>
+
+        <div v-if="!isMobile" class="monut-nav__bar">
+            <ul>
+                <li v-for="(item, index) in items" :key="index">
+                    <a :href="item.id">{{ item.title }}</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-data: () => ({
-    isMenuOpen: false,
-    group: null,
-    items: [
-        {
-            title:'Home',
-            id: '#home'
-        }, 
-        {
-            title:'Info',
-            id: '#info'
-        },
-        {
-            title:'Menu',
-            id: '#menu'
-        },
-        {
-            title:'Contact Us',
-            id: '#contact-us'
-        },
-    ]
-}),
+    name: 'monut-nav',
+    data() {
+        return {
+            items: [
+                {
+                    title:'Home',
+                    id: '#home'
+                }, 
+                {
+                    title:'Info',
+                    id: '#info'
+                },
+                {
+                    title:'Menu',
+                    id: '#menu'
+                },
+                {
+                    title:'Contact Us',
+                    id: '#contact-us'
+                },
+            ]
+        }
+    },
+    props: {
+        isMobile: {
+            type: Boolean,
+            required: false,
+            default: false,
+        }
+    }
 }
 </script>
 
@@ -41,13 +55,26 @@ data: () => ({
     z-index: 1;
     position: fixed;
     top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: baseline;
     font-size: 18pt;
     padding-right: 20px;
     background-color: $monut-bg-color;
+
+    &__bar { 
+        width: 100vw;
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
+        padding-right: 15px;
+        background-color: $monut-bg-color;
+    }
+
+    &__mobile {
+        width: 100vw;
+        padding-top: 10px;
+        padding-left: 10px;
+        align-self: flex-start;
+        
+    }
 
     ul {
         list-style-type: none;

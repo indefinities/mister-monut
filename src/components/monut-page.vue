@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <div class="monut-page"
     data-aos="fade-down" 
@@ -12,8 +8,8 @@
 
 <style lang= "scss">
 .monut-page {
-    min-height: 90vh;
     display: block;
+    min-height: 100%;
     margin: 10vh 10vw;
 }
 </style>

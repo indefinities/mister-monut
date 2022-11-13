@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 .monut-contact-us {
-  margin-top: 15vh;
+  margin-top: 20vh;
 
 }
 </style>

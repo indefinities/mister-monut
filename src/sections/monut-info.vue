@@ -1,12 +1,13 @@
-<script setup>
-import { monutPage } from "../components/component-export.js";
-</script>
-
 <template>
   <section class="monut-info" id="info">
     <monut-page>
+      <div class="monut-info__insta">
+        <h2>📷 Instagram</h2>
+        <instagram-embed />
+      </div>
+
       <div class="monut-info__location">
-        <span class="text-h3">Location</span>
+        <h2>📍Location</h2>
 
         <div class="monut-info__location--content">
           <iframe
@@ -34,8 +35,26 @@ import { monutPage } from "../components/component-export.js";
   </section>
 </template>
 
+<script>
+import { monutPage, instagramEmbed } from "../components/component-export.js";
+
+export default {
+  name: 'monut-info',
+  components: {
+    monutPage, 
+    instagramEmbed
+  }
+}
+</script>
+
 <style lang="scss">
 .monut-info {
+  &__insta {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &__location {
     width: 100%;
     margin-top: 50px;
