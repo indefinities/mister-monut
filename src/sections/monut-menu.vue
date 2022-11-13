@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     imageSrc(folderName, fileName) {
-      return new URL(`../../public/images/` + folderName + `/` + fileName + `.jpg`, import.meta.url).href
+      return new URL(`../../public/images/${folderName}/${fileName}.jpg`, import.meta.url).href
     }
   }
 }
