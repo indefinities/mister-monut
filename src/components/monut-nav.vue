@@ -57,7 +57,7 @@ export default {
     top: 0;
     font-size: 18pt;
     padding-right: 20px;
-    background-color: $monut-bg-color;
+
 
     &__bar { 
         width: 100vw;
@@ -65,7 +65,7 @@ export default {
         align-items: baseline;
         justify-content: flex-end;
         padding-right: 15px;
-        background-color: $monut-bg-color;
+        background-image: linear-gradient(rgba(255, 215, 215, 1), rgba(255, 215, 215, 0.25));
     }
 
     &__mobile {
