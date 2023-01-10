@@ -6,24 +6,20 @@
       <div class="mt-10">
         <h2>🍩 Monuts</h2>
 
-        <div 
-        class="d-flex flex-wrap justify-start align-start"
-        >
+        <div>
           <div 
           class="monut-menu__flavor"
           v-for="(monut, index) in monutFlavors" :key="index">
-            <v-card tonal :width="cardWidth">
               <img 
               class="monut-menu__flavor--img"
               :src="imageSrc('monuts', monut.file)" />
               
-                  <v-card-title>
-                    {{ monut.name }}
-                  </v-card-title>
-                  <v-card-text>
-                    {{ monut.desc }}
-                  </v-card-text>
-            </v-card>
+                  <h3>{{ monut.name }}</h3>
+                  <span>
+                    <p>
+                      {{ monut.desc }}
+                    </p>
+                  </span>
           </div>
         </div>
       </div>
@@ -38,18 +34,16 @@
           <div 
           class="monut-menu__flavor"
           v-for="(croffle, index) in croffleFlavors" :key="index">
-            <v-card tonal :width="cardWidth">
               <img 
               class="monut-menu__flavor--img"
               :src="imageSrc('croffles', croffle.file)" />
               
-                  <v-card-title>
-                    {{ croffle.name }}
-                  </v-card-title>
-                  <v-card-text>
-                    {{ croffle.desc }}
-                  </v-card-text>
-            </v-card>
+                  <h3>{{ croffle.name }}</h3>
+                  <span>
+                    <p>
+                      {{ croffle.desc }}
+                    </p>
+                  </span>
           </div>
         </div>
   </div>
@@ -89,6 +83,7 @@ export default {
 <style lang="scss" scoped>
 .monut-menu {
   &__flavor {
+    width: 375px;
     margin: 5px;
 
     @media screen and (max-width: 480px) {

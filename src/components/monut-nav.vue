@@ -65,7 +65,7 @@ export default {
         align-items: baseline;
         justify-content: flex-end;
         padding-right: 15px;
-        background-image: linear-gradient(rgba(255, 215, 215, 1), rgba(255, 215, 215, 0.25));
+        background-image: linear-gradient(rgba(255, 215, 215, 1), rgba(255, 215, 215, 0));
     }
 
     &__mobile {

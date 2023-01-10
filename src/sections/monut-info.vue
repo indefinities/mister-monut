@@ -28,19 +28,23 @@
       </div>
 
       <div class="monut-info__hours">
-        <p><strong>Hours of Operation</strong></p>
-          <img src="../assets/store-sign.svg" />
+          <monut-store-sign />
       </div>
     </monut-page>
   </section>
 </template>
 
 <script>
-import { monutPage, instagramEmbed } from "../components/component-export.js";
+import {
+  monutPage,
+  instagramEmbed,
+  monutStoreSign
+} from "../components/component-export.js";
 
 export default {
   name: 'monut-info',
   components: {
+    monutStoreSign,
     monutPage, 
     instagramEmbed
   }
@@ -65,17 +69,6 @@ export default {
       margin: 30px 0;
       border: 1px solid grey;
       border-radius: 10px;
-    }
-  }
-  &__hours {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    margin-top: 10vh;
-
-    @media screen and (min-width: 480px) {
-      width: 20vw;
     }
   }
 }

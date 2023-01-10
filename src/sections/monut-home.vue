@@ -1,20 +1,10 @@
 <template>
   <section class="monut-home">
-    <monut-nav :is-mobile="isMobile" />
-
     <monut-page class="monut-home__content">
       <div class="monut-home__logo">
         <img src="../assets/logo-img.svg" />
         <img src="../assets/logo-title.svg" />
       </div>
-
-      <!-- <v-btn
-        class="d-block mr-auto ml-auto mt-13 pt-4"
-        variant="outlined"
-        icon="mdi-instagram"
-        size="x-large"
-        href="https://www.instagram.com/mistermonut/"
-      ></v-btn> -->
 
       <div class="monut-home__footer">
         <p><em>munch on a monut</em></p>
@@ -28,12 +18,11 @@
 </template>
 
 <script>
-import { monutNav, monutPage } from "../components/component-export.js";
+import { monutPage } from "../components/component-export.js";
 
 export default {
   name: "monut-home",
   components: {
-    monutNav,
     monutPage,
   },
   data() {
