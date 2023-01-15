@@ -8,10 +8,7 @@ import {
   monutHome,
   monutInfo,
   monutMenu,
-  monutContactUs,
 } from './sections/sections-export';
-
-
 
 </script>
 
@@ -20,7 +17,6 @@ import {
   <monut-home />
   <monut-info />
   <monut-menu />
-  <monut-contact-us />
   <monut-footer />
 </template>
 

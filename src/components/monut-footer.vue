@@ -1,6 +1,6 @@
 <template>
   <div class="monut-footer">
-    <p>mister monut © ️{{ getCurrentYear }}</p>
+    <p>mister monut © {{ getCurrentYear }}</p>
   </div>
 </template>
 
@@ -20,8 +20,16 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../styles/_base";
+
 .monut-footer {
   text-align: center;
+  background-color: $monut-secondary-color;
   width: 100vw;
+  padding: 2vh 0;
+
+  p {
+    color: $monut-primary-color;
+  }
 }
 </style>

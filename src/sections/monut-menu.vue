@@ -1,26 +1,26 @@
 <template>
   <section class="monut-menu" id="menu">
     <monut-page>
-      <span class="text-h3">Weekly Flavors</span>
+      <h1>Weekly Flavors</h1>
 
-      <div class="mt-10">
+      <div>
         <h2>🍩 Monuts</h2>
 
-        <div>
-          <div 
+        <div class="monut-menu__flavors">
+          <monut-card
           class="monut-menu__flavor"
-          v-for="(monut, index) in monutFlavors" :key="index">
-              <img 
-              class="monut-menu__flavor--img"
-              :src="imageSrc('monuts', monut.file)" />
-              
-                  <h3>{{ monut.name }}</h3>
-                  <span>
-                    <p>
+          v-for="(monut, index) in monutFlavors" :key="index"
+          :image="imageSrc('monuts', monut.file)">
+
+                  <template #title>
+                    {{ monut.name }}
+                  </template>
+
+                  <template #desc>
                       {{ monut.desc }}
-                    </p>
-                  </span>
-          </div>
+                  </template>
+
+          </monut-card>
         </div>
       </div>
 
@@ -28,23 +28,22 @@
 
   <div class="mt-10">
     <h2>🧇 Croffles</h2>
-      <div 
-      class="d-flex flex-wrap justify-start align-start"
-      >
-          <div 
+
+      <div class="monut-menu__flavors">
+          <monut-card
           class="monut-menu__flavor"
-          v-for="(croffle, index) in croffleFlavors" :key="index">
-              <img 
-              class="monut-menu__flavor--img"
-              :src="imageSrc('croffles', croffle.file)" />
+          v-for="(croffle, index) in croffleFlavors" :key="index"
+          :image="imageSrc('croffles', croffle.file)">
               
-                  <h3>{{ croffle.name }}</h3>
-                  <span>
-                    <p>
-                      {{ croffle.desc }}
-                    </p>
-                  </span>
-          </div>
+                <template #title>
+                  {{ croffle.name }}
+                </template>
+
+                <template #desc>
+                  {{ croffle.desc }}
+                </template>
+
+          </monut-card>
         </div>
   </div>
       
@@ -53,21 +52,25 @@
 </template>
 
 <script>
-import { croffleFlavors, monutFlavors } from '../data/flavors';
+import {
+  croffleFlavors,
+  monutFlavors
+} from '../data/flavors';
 
 import {
   monutPage,
+  monutCard,
 } from '../components/component-export.js'
 
 
 export default {
   name: 'monut-menu',
   components: {
+    monutCard,
     monutPage
   },
   data() {
     return {
-      cardWidth: 300,
       croffleFlavors,
       monutFlavors,
     }
@@ -82,9 +85,14 @@ export default {
 
 <style lang="scss" scoped>
 .monut-menu {
+  &__flavors {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
   &__flavor {
-    width: 375px;
-    margin: 5px;
+    margin-top: 1vh;
 
     @media screen and (max-width: 480px) {
       width: 100%;

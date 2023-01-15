@@ -244,7 +244,7 @@
   </blockquote>
 </template>
 
-<script>
+<script lang="js">
 export default {
   name: 'instagram-embed',
   mounted() {
@@ -257,6 +257,7 @@ export default {
 
 <style lang="scss" scoped>
 .instagram-media {
+    width: 50%;
     background: #fff;
     border: 0;
     border-radius: 3px;

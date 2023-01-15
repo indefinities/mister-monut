@@ -1,6 +1,6 @@
 const monutFlavors = [
   {
-    name: "Plain (Sugar)",
+    name: "Plain",
     file:"plain",
     desc: "A plain monut glazed with sugar.",
   },
@@ -8,6 +8,11 @@ const monutFlavors = [
     name: "Matcha",
     file:"matcha",
     desc: "Green tea flavored glaze with a bittersweet taste.",
+  },
+  {
+    name: "Sugar",
+    file: "sugar",
+    desc: "Mochi donut dressed in sugar.",
   },
   {
     name: "Black Sesame",
