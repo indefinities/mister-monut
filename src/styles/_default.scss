@@ -1,8 +1,11 @@
 @import './_variables';
 
-body {
+:root {
     font-family: $monut-font-family;
-    background-color: $monut-bg-color;
+    background-color: $monut-primary-color;
+}
+
+body {
     margin: 0;
     padding: 0;
 }
@@ -13,13 +16,19 @@ a {
 }
 
 h1 {
+
     font-size: $monut-h1;
+    margin: 0;
 }
 
 h2 {
+    color: $monut-dark-color;
     font-size: $monut-h2;
+    margin: 0;
 }
 
 p {
+    color: $monut-secondary-color;
     font-size: $monut-text;
+    margin: 0;
 }
