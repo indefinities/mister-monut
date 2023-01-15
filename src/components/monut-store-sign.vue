@@ -1,6 +1,6 @@
 <template>
   <div class="monut-store-sign">
-    <h2>Hours of Operation</h2>
+    <h2>🕚 Hours of Operation</h2>
 
     <div class="monut-store-sign__sign">
       <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025.15 1019">
@@ -35,13 +35,18 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .monut-store-sign {
-  width: 50vw;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
   text-align: center;
+
+  &__sign {
+    svg {
+      @media screen and (min-width: 480px) {
+        width: 40%;
+      }
+    }
+  }
 }
 
 

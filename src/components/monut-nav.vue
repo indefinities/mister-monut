@@ -16,7 +16,9 @@
             </svg>
           </div>
             <ul>
-                <li v-for="(item, index) in items" :key="index">
+                <li @click="this.drawerActions()"
+                    v-for="(item, index) in items"
+                    :key="index">
                     <a :href="item.id">{{ item.title }}</a>
                 </li>
             </ul>

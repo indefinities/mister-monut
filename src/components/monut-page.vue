@@ -1,7 +1,7 @@
 <template>
     <div class="monut-page"
-    data-aos="fade-down" 
-    data-aos-duration="2000">
+        data-aos="fade-down"
+        data-aos-duration="1000">
         <slot />
     </div>
 </template>

@@ -51,9 +51,6 @@ export default {
 <style lang="scss">
 .monut-info {
   &__insta {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
     margin-bottom: 10vh;
   }
 
@@ -70,6 +67,10 @@ export default {
       border: 1px solid grey;
       border-radius: 10px;
     }
+  }
+
+  &__hours {
+    margin-top: 10vh;
   }
 }
 </style>

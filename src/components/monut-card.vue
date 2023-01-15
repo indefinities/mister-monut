@@ -1,8 +1,5 @@
 <template>
-  <div class="monut-card"
-       data-aos="fade-up"
-       data-aos-duration="1000"
-       data-aos-anchor-placement="bottom-center">
+  <div class="monut-card">
     <img class="monut-card__image"
         :src="image" />
 
