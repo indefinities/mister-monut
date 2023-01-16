@@ -10,7 +10,7 @@
         <h1>📍Location</h1>
         <div class="monut-info__address">
           <p>🏪 873 Main Street, Waltham, MA</p>
-          <p>☎ (781) 893 - 1809</p>
+          <a href="tel:781-893-1809">☎ (781) 893 - 1809</a>
         </div>
 
         <div class="monut-info__location">
@@ -49,6 +49,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../styles/_base";
+
 .monut-info {
   &__insta {
     margin-bottom: 10vh;
@@ -56,10 +58,14 @@ export default {
 
   &__address {
     margin-left: 5vw;
+    a {
+      color: $monut-secondary-color;
+    }
   }
 
   &__location {
     margin: 5vh 0;
+
 
     iframe {
       width: 100%;

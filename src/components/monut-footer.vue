@@ -1,6 +1,9 @@
 <template>
   <div class="monut-footer">
-    <p>mister monut © {{ getCurrentYear }}</p>
+    <a href="mailto:nick@justkdog.com">📧 nick@justkdog.com</a>
+    <p>🏪 873 Main Street, Waltham, MA</p>
+    <a href="tel:781-893-1809">☎ (781) 893 - 1809</a>
+    <p><em>mister monut</em> © {{ getCurrentYear }}</p>
   </div>
 </template>
 
@@ -26,9 +29,9 @@ export default {
   text-align: center;
   background-color: $monut-secondary-color;
   width: 100vw;
-  padding: 2vh 0;
+  padding: 1vh 0;
 
-  p {
+  a, p {
     color: $monut-primary-color;
   }
 }

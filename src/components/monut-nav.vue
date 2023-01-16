@@ -115,7 +115,7 @@ export default {
   }
 
   a {
-    color: $monut-dark-color;
+    color: $monut-tertiary-color;
     font-size: 64px;
     display: block;
     text-align: center;

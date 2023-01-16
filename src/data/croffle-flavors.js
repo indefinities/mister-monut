@@ -1,30 +1,60 @@
-  const croffleFlavors = [
+const croffleFlavors = [
     {
-      name: 'Blueberry',
-      file: 'blueberry',
-      desc: 'The combination of raspberries and blackberries and whipped cream adds a fruity flavor to the croffle.',
+        name: 'Cream',
+        file: 'cream',
+        desc: "A croffle topped with plain whipped cream. You can't get more original than this.",
     },
     {
-      name: 'Strawberry',
-      file: 'strawberry',
-      desc: 'The sweetness and crunchiness of the buscuit adds texture to the croffle.',
+        name: 'Blueberry',
+        file: 'blueberry',
+        desc: 'A croffle topped with blueberry cream and fresh blueberries.',
     },
     {
-      name: 'Cream',
-      file: 'cream',
-      desc: 'Just some typical average cream on a croffle.',
+        name: 'Strawberry',
+        file: 'strawberry',
+        desc: 'A croffle topped with whipped cream, fresh strawberries, and sugar.',
     },
     {
-      name: 'Matcha',
-      file: 'matcha',
-      desc: 'The matcha flavor adds a creamy green tea-esque flavor to the croffle.',
+        name: 'Matcha',
+        file: 'matcha',
+        desc: 'A croffle topped with matcha cream, powder, and a KitKat®.',
     },
-  {
-      name: 'Matcha Adzuki',
-      file: 'matcha-adzuki',
-      desc: 'The matcha flavor adds a creamy green tea-esque flavor to the croffle.',
-  },
-  ];
-  
-  Object.freeze(croffleFlavors);
-  export default croffleFlavors;
+    {
+        name: 'Matcha Adzuki',
+        file: 'matcha-adzuki',
+        desc: 'A croffle topped with red bean-infused matcha cream and a matcha KitKat®.',
+    },
+    {
+        name: 'Cookies & Cream',
+        file: 'cookies-and-cream',
+        desc: 'A croffle topped layered in cookies and cream topped with Oreos®.',
+    },
+    {
+        name: 'Mango',
+        file: 'mango',
+        desc: 'A croffle topped with whipped cream and fresh mangoes.',
+    },
+    {
+        name: 'Biscuit',
+        file: 'biscuit',
+        desc: 'A croffle layered in cookies and cream topped with Biscoff®.',
+    },
+    {
+        name: 'Pistachio',
+        file: 'pistachio',
+        desc: 'A croffle layered in pistachio with fresh pistachios on top.',
+    },
+    {
+        name: 'Nutella',
+        file: 'nutella',
+        desc: 'A croffle layered in Nutella® topped with fresh almonds.',
+    },
+    {
+        name: 'Ube (Taro)',
+        file: 'ube',
+        desc: 'A croffle layered in ube topped with coconut shreds and sprinkles.',
+    },
+];
+
+Object.freeze(croffleFlavors);
+export default croffleFlavors;

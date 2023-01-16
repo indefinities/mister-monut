@@ -36,20 +36,21 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../styles/_base";
+
 .monut-store-sign {
   width: 100%;
   text-align: center;
 
   &__sign {
     svg {
+      fill: $monut-black;
       @media screen and (min-width: 480px) {
         width: 40%;
       }
     }
   }
 }
-
-
 
 .cls-1 {
   letter-spacing:-.02em;
@@ -60,8 +61,8 @@ export default {
 }
 
 .cls-3{
-  font-family: 'Avenir', sans-serif;
-  font-size: 72px;
+  font-family: $monut-font-family;
+  font-size: 96px;
 }
 
 .cls-4{

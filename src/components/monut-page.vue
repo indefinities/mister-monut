@@ -8,8 +8,13 @@
 
 <style lang= "scss">
 .monut-page {
-    display: block;
+    max-width: 980px;
     min-height: 100%;
-    margin: 10vh 10vw;
+    display: block;
+    margin: 10vh auto;
+
+  @media screen and (max-width: 480px) {
+    margin: 10vh 1em;
+  }
 }
 </style>

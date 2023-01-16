@@ -20,20 +20,10 @@ const monutFlavors = [
     desc: "A slightly grainy flavors which adds texture.",
   },
   {
-    name: "Ube/ Taro",
-    file: "ube",
-    desc: "Taro adds a sweet yam flavor to the monut.",
-  },
-  {
     name: "Strawberry Milk",
     file: "strawberry",
     desc: "This milky strawberry flavor will stimulate your taste buds.",
   },
-  {
-    name: "Cookies and Cream",
-    file: "cookies",
-    desc: "Do you like Oreos?",
-  }
 ];
 
 Object.freeze(monutFlavors);

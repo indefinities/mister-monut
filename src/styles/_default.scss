@@ -1,7 +1,7 @@
 @import './_variables';
 
 :root {
-    font-family: $monut-font-family;
+    font-family: 'Patrick Hand', serif;
     background-color: $monut-primary-color;
 }
 
@@ -11,18 +11,19 @@ body {
 }
 
 a {
+    color: $monut-tertiary-color;
     text-decoration: none;
     font-size: $monut-text;
 }
 
 h1 {
-
+    color: $monut-black;
     font-size: $monut-h1;
     margin: 0;
 }
 
 h2 {
-    color: $monut-dark-color;
+    color: $monut-tertiary-color;
     font-size: $monut-h2;
     margin: 0;
 }

@@ -3,49 +3,65 @@
     <monut-page>
       <h1>Weekly Flavors</h1>
 
-      <div>
-        <h2>🍩 Monuts</h2>
+      <div class="monut-menu__section">
+        <div class="monut-menu__title">
+          <h2>🧇 Croffles</h2>
+          <p>
+            What is a <strong>croffle</strong>? <br>
+            A <a href="https://en.wikipedia.org/wiki/Croffle" target="_blank">croffle</a> is a hybrid between a croissant and a waffle which originated from South Korea.
+          </p>
+        </div>
 
         <div class="monut-menu__flavors">
           <monut-card
-          class="monut-menu__flavor"
-          v-for="(monut, index) in monutFlavors" :key="index"
-          :image="imageSrc('monuts', monut.file)">
+              v-for="(croffle, index) in croffleFlavors" :key="index"
+              :image="imageSrc('croffles', croffle.file)">
 
-                  <template #title>
-                    {{ monut.name }}
-                  </template>
+            <template #title>
+              <h2>
+                {{ croffle.name }}
+              </h2>
+            </template>
 
-                  <template #desc>
-                      {{ monut.desc }}
-                  </template>
+            <template #desc>
+              <p>
+                {{ croffle.desc }}
+              </p>
+            </template>
 
           </monut-card>
         </div>
       </div>
 
 
+      <div class="monut-menu__section">
+        <div class="monut-menu__title">
+          <h2>🍩 Monuts</h2>
+          <p>
+            What is a <strong>mochi donut</strong>? <br>
+            A <a href="https://en.wikipedia.org/wiki/Mochi_donuts" target="_blank">mochi donut</a> is a fusion pastry crossing traditional American doughnuts and Japanese mochi
+          </p>
+        </div>
 
-  <div class="mt-10">
-    <h2>🧇 Croffles</h2>
-
-      <div class="monut-menu__flavors">
+        <div class="monut-menu__flavors">
           <monut-card
-          class="monut-menu__flavor"
-          v-for="(croffle, index) in croffleFlavors" :key="index"
-          :image="imageSrc('croffles', croffle.file)">
-              
-                <template #title>
-                  {{ croffle.name }}
-                </template>
+          v-for="(monut, index) in monutFlavors" :key="index"
+          :image="imageSrc('monuts', monut.file)">
+                  <template #title>
+                    <h2>
+                      {{ monut.name }}
+                    </h2>
+                  </template>
 
-                <template #desc>
-                  {{ croffle.desc }}
-                </template>
+                  <template #desc>
+                    <p>
+                      {{ monut.desc }}
+                    </p>
+                  </template>
 
           </monut-card>
         </div>
-  </div>
+      </div>
       
     </monut-page>
   </section>
@@ -62,7 +78,6 @@ import {
   monutCard,
 } from '../components/component-export.js'
 
-
 export default {
   name: 'monut-menu',
   components: {
@@ -77,7 +92,7 @@ export default {
   },
   methods: {
     imageSrc(folderName, fileName) {
-      return new URL(`/images/${folderName}/${fileName}.jpg`, import.meta.url).href
+      return new URL(`../../public/images/${folderName}/${fileName}.jpg`, import.meta.url).href
     }
   }
 }
@@ -85,22 +100,26 @@ export default {
 
 <style lang="scss" scoped>
 .monut-menu {
+  &__section {
+    margin-bottom: 10vh;
+  }
+
+  &__title {
+    margin: 2vh 0;
+
+    @media screen and (min-width: 768px) {
+      width: 60%;
+    }
+
+    p {
+      padding: 2vh 0;
+    }
+  }
+
   &__flavors {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-  }
-
-  &__flavor {
-    margin-top: 1vh;
-
-    @media screen and (max-width: 480px) {
-      width: 100%;
-    }
-
-    &--img {
-      width: 100%;
-    }
+    justify-content: flex-start;
   }
 }
 </style>

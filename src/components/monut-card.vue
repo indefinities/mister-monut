@@ -4,14 +4,9 @@
         :src="image" />
 
     <div class="monut-card__content">
-      <h2>
         <slot name="title" />
-      </h2>
-      <p>
         <slot name="desc" />
-      </p>
     </div>
-
 
   </div>
 </template>
@@ -33,11 +28,16 @@ export default {
 <style lang="scss">
 
 .monut-card {
-  margin: 5vh 0;
-  width: 35vw;
+  width: 100%;
+  height: fit-content;
+  margin: 1em;
   border-radius: 10px;
   background-color: white;
   transition: box-shadow .3s;
+
+  @media screen and (min-width: 768px) {
+    width: 30%;
+  }
 
   &:hover {
     box-shadow: 0 0 20px rgba(33,33,33,.5);
@@ -45,12 +45,13 @@ export default {
 
   &__image {
     width: 100%;
-    border-radius: 10px;
+    height: 70%;
+    border-radius: 10px 10px 0 0;
     object-fit: cover;
   }
 
   &__content {
-    padding: 20px;
+    margin: 1em;
   }
 
 }

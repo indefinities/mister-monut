@@ -42,15 +42,15 @@ export default {
 
 <style lang="scss" scoped>
 .monut-home {
-  height: 100vh;
   background: no-repeat top/80% url('../assets/monut-logo.svg');
 
   @media screen and (min-width: 480px) {
     background: no-repeat top/45% url('../assets/monut-logo.svg');
   }
 
+  //if on desktop, put background image at a fixed width
   @media screen and (min-width: 768px) {
-    background: no-repeat top/35% url('../assets/monut-logo.svg');
+    background: no-repeat top/500px url('../assets/monut-logo.svg');
   }
 
   &__content {
