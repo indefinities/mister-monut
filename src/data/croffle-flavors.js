@@ -25,6 +25,11 @@ const croffleFlavors = [
         desc: 'A croffle topped with red bean-infused matcha cream and a matcha KitKat®.',
     },
     {
+        name: 'Matcha Pistachio',
+        file: 'pistachio',
+        desc: 'A croffle layered in matcha with fresh pistachios on top.',
+    },
+    {
         name: 'Cookies & Cream',
         file: 'cookies-and-cream',
         desc: 'A croffle topped layered in cookies and cream topped with Oreos®.',
@@ -38,11 +43,6 @@ const croffleFlavors = [
         name: 'Biscuit',
         file: 'biscuit',
         desc: 'A croffle layered in cookies and cream topped with Biscoff®.',
-    },
-    {
-        name: 'Pistachio',
-        file: 'pistachio',
-        desc: 'A croffle layered in pistachio with fresh pistachios on top.',
     },
     {
         name: 'Nutella',
