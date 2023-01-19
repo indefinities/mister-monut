@@ -5,12 +5,12 @@ const croffleFlavors = [
         desc: "A croffle topped with plain whipped cream. You can't get more original than this.",
     },
     {
-        name: 'Blueberry',
+        name: 'Blueberry Cream Cheese',
         file: 'blueberry',
         desc: 'A croffle topped with blueberry cream and fresh blueberries.',
     },
     {
-        name: 'Strawberry',
+        name: 'Strawberry Whipped Cream',
         file: 'strawberry',
         desc: 'A croffle topped with whipped cream, fresh strawberries, and sugar.',
     },
@@ -35,7 +35,7 @@ const croffleFlavors = [
         desc: 'A croffle topped layered in cookies and cream topped with Oreos®.',
     },
     {
-        name: 'Mango',
+        name: 'Mango Whipped Cream',
         file: 'mango',
         desc: 'A croffle topped with whipped cream and fresh mangoes.',
     },
@@ -50,9 +50,14 @@ const croffleFlavors = [
         desc: 'A croffle layered in Nutella® topped with fresh almonds.',
     },
     {
-        name: 'Ube (Taro)',
+        name: 'Taro Glazed with Coconut',
         file: 'ube',
         desc: 'A croffle layered in ube topped with coconut shreds and sprinkles.',
+    },
+    {
+        name: 'Nutella & Banana',
+        file: 'nutella-banana',
+        desc: 'A croffle layered in Nutella® whipped cream topped with bananas and glazed in chocolate syrup.',
     },
 ];
 

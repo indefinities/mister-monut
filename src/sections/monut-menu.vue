@@ -5,9 +5,9 @@
 
       <div class="monut-menu__section">
         <div class="monut-menu__title">
-          <h2>🧇 Croffles</h2>
+          <h2>🧇 Kroffles</h2>
           <p>
-            What is a <strong>croffle</strong>? <br>
+            What is a <strong>kroffle</strong>? <br>
             A <a href="https://en.wikipedia.org/wiki/Croffle" target="_blank">croffle</a> is a hybrid between a croissant and a waffle which originated from South Korea.
           </p>
         </div>
