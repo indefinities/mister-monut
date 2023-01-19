@@ -1,5 +1,5 @@
 <template>
-  <div class="monut-card">
+  <div class="monut-card" tabindex="0">
     <img class="monut-card__image"
         :src="image" />
 

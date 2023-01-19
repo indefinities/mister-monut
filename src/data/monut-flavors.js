@@ -2,12 +2,17 @@ const monutFlavors = [
   {
     name: "Plain",
     file:"plain",
-    desc: "A plain monut glazed with sugar.",
+    desc: "A plain monut straight from the fryer.",
   },
   {
     name: "Matcha",
     file:"matcha",
-    desc: "Green tea flavored glaze with a bittersweet taste.",
+    desc: "A monut glazed with a bittersweet green tea flavor.",
+  },
+  {
+    name: "Matcha Pistachio",
+    file: "matcha-pistachio",
+    desc: "A monut glazed with a bittersweet green tea flavor topped with fresh pistachios.",
   },
   {
     name: "Sugar",
@@ -20,9 +25,19 @@ const monutFlavors = [
     desc: "A slightly grainy flavors which adds texture.",
   },
   {
+    name: "Cookies and Cream",
+    file: "cookies",
+    desc: "A monut glazed in cookies and cream topped with Oreos®.",
+  },
+  {
     name: "Strawberry Milk",
     file: "strawberry",
-    desc: "This milky strawberry flavor will stimulate your taste buds.",
+    desc: "A monut glazed in strawberry milk topped with a Pocky® stick.",
+  },
+  {
+    name: "Taro",
+    file: "taro",
+    desc: "A monut glazed in taro topped with fresh almonds and chocolate syrup.",
   },
 ];
 
