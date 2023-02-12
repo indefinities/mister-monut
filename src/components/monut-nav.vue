@@ -16,11 +16,17 @@
             </svg>
           </div>
             <ul>
+              <li>
+                <router-link to="/" @click="this.drawerActions()" >Home</router-link>
+              </li>
                 <li @click="this.drawerActions()"
                     v-for="(item, index) in items"
                     :key="index">
                     <a :href="item.id">{{ item.title }}</a>
                 </li>
+              <li @click="this.drawerActions()">
+                <router-link to="/menu/">Menu & Prices</router-link>
+              </li>
             </ul>
         </div>
     </div>
@@ -34,20 +40,12 @@ export default {
             openMenu: false,
             items: [
                 {
-                    title:'Home',
-                    id: '#home'
-                }, 
-                {
                     title:'Info',
                     id: '#info'
                 },
                 {
-                    title:'Menu',
+                    title:'Flavors',
                     id: '#menu'
-                },
-                {
-                    title:'Contact Us',
-                    id: '#contact-us'
                 },
             ]
         }

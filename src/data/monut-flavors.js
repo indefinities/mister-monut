@@ -5,6 +5,11 @@ const monutFlavors = [
     desc: "A plain monut straight from the fryer.",
   },
   {
+    name: "Peanut Butter",
+    file:"peanut",
+    desc: "A monut glazed in peanut butter topped with Reese's Pieces and chocolate glaze.",
+  },
+  {
     name: "Matcha",
     file:"matcha",
     desc: "A monut glazed with a bittersweet green tea flavor.",
@@ -15,11 +20,6 @@ const monutFlavors = [
     desc: "A monut glazed with a bittersweet green tea flavor topped with fresh pistachios.",
   },
   {
-    name: "Sugar",
-    file: "sugar",
-    desc: "Mochi donut dressed in sugar.",
-  },
-  {
     name: "Black Sesame",
     file: "sesame",
     desc: "A slightly grainy flavors which adds texture.",
@@ -28,6 +28,11 @@ const monutFlavors = [
     name: "Cookies and Cream",
     file: "cookies",
     desc: "A monut glazed in cookies and cream topped with Oreos®.",
+  },
+  {
+    name: "Sugar",
+    file: "sugar",
+    desc: "A monut glazed in sugar and toped with sprinkles.",
   },
   {
     name: "Strawberry Milk",
