@@ -1,48 +1,48 @@
 const monutFlavors = [
   {
-    name: "Plain",
-    file:"plain",
-    desc: "A plain monut straight from the fryer.",
+    name: "Cinnamon Sugar",
+    file:"cinnamon-sugar",
+    desc: "A monut fresh from the fryer and dusted in sweet cinnamon sugar.",
   },
   {
     name: "Peanut Butter",
-    file:"peanut",
-    desc: "A monut glazed in peanut butter topped with Reese's Pieces and chocolate glaze.",
+    file:"peanut-butter",
+    desc: "A monut topped with a peanut butter glaze, crunchy peanuts and Reese's Pieces®.",
   },
-  {
-    name: "Matcha",
-    file:"matcha",
-    desc: "A monut glazed with a bittersweet green tea flavor.",
-  },
+  // {
+  //   name: "Matcha",
+  //   file:"matcha",
+  //   desc: "A monut glazed with a bittersweet green tea flavor.",
+  // },
   {
     name: "Matcha Pistachio",
     file: "matcha-pistachio",
-    desc: "A monut glazed with a bittersweet green tea flavor topped with fresh pistachios.",
+    desc: "A monut topped with a bittersweet green tea glaze and fresh, crunchy pistachios.",
   },
   {
     name: "Black Sesame",
-    file: "sesame",
-    desc: "A slightly grainy flavors which adds texture.",
+    file: "black-sesame",
+    desc: "A monut topped with a nutty black sesame glaze and black sesame seeds.",
   },
   {
     name: "Cookies and Cream",
-    file: "cookies",
-    desc: "A monut glazed in cookies and cream topped with Oreos®.",
+    file: "cookies-n-cream",
+    desc: "A monut topped with a cookies and cream glaze and crunchy mini Oreos®.",
   },
   {
-    name: "Sugar",
-    file: "sugar",
-    desc: "A monut glazed in sugar and toped with sprinkles.",
+    name: "Strawberry Pretzel",
+    file: "strawberry-pretzel",
+    desc: "A monut topped with a strawberry milk glaze and a crunchy strawberry pretzel.",
   },
   {
-    name: "Strawberry Milk",
-    file: "strawberry",
-    desc: "A monut glazed in strawberry milk topped with a Pocky® stick.",
+    name: "Taro Coconut",
+    file: "taro-coconut",
+    desc: "A monut topped with a sweet taro glaze and shredded coconut.",
   },
   {
-    name: "Taro",
-    file: "taro",
-    desc: "A monut glazed in taro topped with fresh almonds and chocolate syrup.",
+    name: "Honeydew",
+    file: "honeydew",
+    desc: "A monut topped with a fresh honeydew glaze, and a sugar flower."
   },
 ];
 
