@@ -1,44 +1,61 @@
 const kroffleFlavors = [
     {
-        name: 'Blueberry Cheesecake',
-        file: 'blueberry',
-        desc: 'A kroffle topped with whipped blueberry cream cheese and fresh blueberries.',
-    },
-    {
-        name: 'Strawberry & Cream',
-        file: 'strawberry-cream',
-        desc: 'A kroffle topped with fresh whipped cream, ripe strawberries and sugar.',
-    },
-    {
-        name: 'Nutella & Banana',
-        file: 'banana-nutella',
-        desc: 'A kroffle topped with Nutella® whipped cream, fresh bananas and chocolate syrup.',
-    },
-    {
-        name: 'Matcha & Adzuki',
-        file: 'matcha-adzuki',
-        desc: 'A kroffle topped with a sweet red bean paste and bittersweet green tea cream.',
-    },
-    {
         name: 'Cookies & Cream',
         file: 'cookies-n-cream',
+        type: 'glazed',
+        price: 4.98,
         desc: 'A kroffle topped with a cookies and cream glaze and crunchy mini Oreos®.',
     },
     {
         name: 'Taro Glazed with Coconut',
         file: 'taro-coconut',
+        type: 'glazed',
+        price: 4.98,
         desc: 'A kroffle topped with a sweet taro glaze and shredded coconut.',
     },
     {
         name: 'Strawberry & Pretzel',
         file: 'strawberry',
+        type: 'glazed',
+        price: 4.98,
         desc: 'A kroffle topped with a strawberry milky glaze and crunchy strawberry pretzels.',
+    },
+    {
+        name: 'Blueberry Cheesecake',
+        file: 'blueberry',
+        type: 'premium',
+        price: 5.48,
+        desc: 'A kroffle topped with whipped blueberry cream cheese and fresh blueberries.',
+    },
+    {
+        name: 'Strawberry & Cream',
+        file: 'strawberry-cream',
+        type: 'premium',
+        price: 5.48,
+        desc: 'A kroffle topped with fresh whipped cream, ripe strawberries and sugar.',
+    },
+    {
+        name: 'Nutella & Banana',
+        file: 'banana-nutella',
+        type: 'premium',
+        price: 5.48,
+        desc: 'A kroffle topped with Nutella® whipped cream, fresh bananas and chocolate syrup.',
+    },
+    {
+        name: 'Matcha & Adzuki',
+        file: 'matcha-adzuki',
+        type: 'premium',
+        price: 5.48,
+        desc: 'A kroffle topped with a sweet red bean paste and bittersweet green tea cream.',
     },
     {
         name: 'Mixed Fruits & Cream',
         file: 'colorful-fruits',
+        type: 'premium',
+        price: 5.48,
         desc: 'A kroffle topped with fresh whipped cream and assorted seasonal fruits.',
     },
+
     // {
     //     name: 'Mango Whipped Cream',
     //     file: 'mango',

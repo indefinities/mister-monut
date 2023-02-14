@@ -9,11 +9,6 @@ const monutFlavors = [
     file:"peanut-butter",
     desc: "A monut topped with a peanut butter glaze, crunchy peanuts and Reese's Pieces®.",
   },
-  // {
-  //   name: "Matcha",
-  //   file:"matcha",
-  //   desc: "A monut glazed with a bittersweet green tea flavor.",
-  // },
   {
     name: "Matcha Pistachio",
     file: "matcha-pistachio",
@@ -44,6 +39,14 @@ const monutFlavors = [
     file: "honeydew",
     desc: "A monut topped with a fresh honeydew glaze, and a sugar flower."
   },
+  {
+    name: "Biscoff",
+  },
+  // {
+  //   name: "Matcha",
+  //   file:"matcha",
+  //   desc: "A monut glazed with a bittersweet green tea flavor.",
+  // },
 ];
 
 Object.freeze(monutFlavors);
