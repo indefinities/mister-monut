@@ -21,6 +21,13 @@ const kroffleFlavors = [
         desc: 'A kroffle topped with a strawberry milky glaze and crunchy strawberry pretzels.',
     },
     {
+        name: 'Dark Chocolate',
+        file: 'dark-choco',
+        type: 'glazed',
+        price: 4.98,
+        desc: 'A kroffle topped with a dark chocolate glaze sprinkled with crunchy almonds.',
+    },
+    {
         name: 'Blueberry Cheesecake',
         file: 'blueberry',
         type: 'premium',
@@ -55,12 +62,13 @@ const kroffleFlavors = [
         price: 5.48,
         desc: 'A kroffle topped with fresh whipped cream and assorted seasonal fruits.',
     },
-
-    // {
-    //     name: 'Mango Whipped Cream',
-    //     file: 'mango',
-    //     desc: 'A kroffle topped with whipped cream and fresh mangoes.',
-    // },
+    {
+        name: 'Mango & Cream',
+        file: 'mango',
+        type: 'premium',
+        price: 5.48,
+        desc: 'A kroffle topped with whipped cream and fresh mangoes.',
+    },
     // {
     //     name: 'Matcha Pistachio',
     //     file: 'pistachio',

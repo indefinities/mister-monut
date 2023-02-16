@@ -13,7 +13,7 @@
         <ul class="monut-menu__category" v-for="(item, i) in m.items" :key="i">
           <li class="monut-menu__category--item">
             <p>{{ item.name }}</p>
-            <p>{{ item.price }}</p>
+            <p>{{ item.price ? `$${item.price}` : item.price }}</p>
           </li>
         </ul>
 
@@ -22,11 +22,17 @@
         <ul class="monut-menu__category" v-for="(p, i) in m.pricing" :key="i">
           <li class="monut-menu__category--item">
             <p>{{ p.qty }}</p>
-            <p>{{ p.price }}</p>
+            <p>{{ p.price  ? `$${p.price}` : p.price }}</p>
           </li>
         </ul>
 
       </div>
+    </div>
+
+    <div class="monut-menu__button">
+      <monut-button url="/images/menu.png">
+        VIEW PRINT MENU
+      </monut-button>
     </div>
   </section>
 </template>
@@ -34,9 +40,11 @@
 <script>
 import {kroffleFlavors, monutFlavors} from "../data/flavors.js";
 import beverages from "../data/beverages.js";
+import MonutButton from "../components/monut-button.vue";
 
 export default {
   name: "monut-menu",
+  components: {MonutButton},
   data() {
     return {
       menu: [
@@ -86,7 +94,7 @@ export default {
 
 <style lang="scss" scoped>
 .monut-menu {
-  margin: 15vh 10vw 0;
+  margin: 15vh 10vw;
 
   &__header {
     text-align: center;
@@ -115,6 +123,11 @@ export default {
       flex-flow: row nowrap;
       justify-content: space-between;
     }
+  }
+
+  &__button {
+    display: flex;
+    justify-content:center;
   }
 }
 </style>

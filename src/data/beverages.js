@@ -24,6 +24,10 @@ const beverages = [
         price: 2.88,
     },
     {
+        name: 'Starbucks Frappuccino',
+        price: 2.88,
+    },
+    {
         name: 'Water',
         price: 0.88,
     },

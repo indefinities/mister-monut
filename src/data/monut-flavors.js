@@ -41,6 +41,8 @@ const monutFlavors = [
   },
   {
     name: "Biscoff",
+    file: "biscoff",
+    desc: "A monut topped with a biscuit-flavored glaze topped with a cookie."
   },
   // {
   //   name: "Matcha",
