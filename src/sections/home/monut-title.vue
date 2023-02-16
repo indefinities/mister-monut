@@ -89,7 +89,11 @@ export default {
     svg {
       display: block;
       margin: auto;
-      height: 60vh;
+      height: 30vh;
+
+      @media screen and (min-width: 768px) {
+        height: 60vh;
+      }
     }
   }
 

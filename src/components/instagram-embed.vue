@@ -3,7 +3,7 @@
     class="instagram-media"
     data-instgrm-permalink="https://www.instagram.com/mistermonut/?utm_source=ig_embed&amp;utm_campaign=loading"
     data-instgrm-version="14"
-    style="width: 100%"
+    style="width: 100%; min-width: 0px !important"
   >
     <div>
       <a
