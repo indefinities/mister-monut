@@ -256,8 +256,8 @@ export default {
 
 <style lang="scss" scoped>
 .instagram-media {
-    width: 100%;
-    min-width: 0px;
+    margin: 0;
+    min-width: 100%;
     background: #fff;
     border: 0;
     border-radius: 3px;
