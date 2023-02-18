@@ -3,7 +3,6 @@
     class="instagram-media"
     data-instgrm-permalink="https://www.instagram.com/mistermonut/?utm_source=ig_embed&amp;utm_campaign=loading"
     data-instgrm-version="14"
-    style="width: 100%"
   >
     <div>
       <a
@@ -257,7 +256,8 @@ export default {
 
 <style lang="scss" scoped>
 .instagram-media {
-    width: 50%;
+    margin: 0;
+    min-width: 100%;
     background: #fff;
     border: 0;
     border-radius: 3px;

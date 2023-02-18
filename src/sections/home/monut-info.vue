@@ -48,6 +48,7 @@ export default {
 .monut-info {
   &__insta {
     margin-bottom: 10vh;
+    width: 100%;
   }
 
   &__address {
