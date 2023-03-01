@@ -43,7 +43,7 @@
 
       <div class="monut-title__online-order">
         <monut-button url="https://mister-monut.square.site/">
-          online catering available
+          online ordering available
         </monut-button>
       </div>
 
