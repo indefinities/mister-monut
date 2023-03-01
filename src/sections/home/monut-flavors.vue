@@ -92,7 +92,7 @@ export default {
   },
   data() {
     return {
-      kroffleFlavors: kroffleFlavors,
+      kroffleFlavors,
       monutFlavors,
     }
   },
