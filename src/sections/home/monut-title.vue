@@ -40,6 +40,13 @@
           </g>
         </svg>
       </div>
+
+      <div class="monut-title__online-order">
+        <monut-button url="https://mister-monut.square.site/">
+          online catering available
+        </monut-button>
+      </div>
+
       <div class="monut-title__munch">
         <p><em>munch on a monut</em></p>
         <div
@@ -55,10 +62,12 @@
 
 <script>
 import {monutPage} from "../../components/component-export.js";
+import MonutButton from "../../components/monut-button.vue";
 
 export default {
   name: "monut-title",
   components: {
+    MonutButton,
     monutPage,
   },
 };
@@ -101,8 +110,13 @@ export default {
     margin-top: 15vh;
   }
 
+  &__online-order {
+    margin: 5vh 0;
+    display: flex;
+    justify-content: center;
+  }
+
   &__munch {
-    margin-top: 10vh;
     text-align: center;
 
     &__arrow {

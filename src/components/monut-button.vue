@@ -46,7 +46,7 @@ export default {
      * @returns {string}
      */
     toLink() {
-      return window.location.href = this.url;
+      return window.open(this.url, '_blank');
     },
   },
 }
@@ -56,24 +56,32 @@ export default {
 @import "../styles/_base.scss";
 
 .monut-button {
-  width: 30%;
+  width: 100%;
   border-radius: 10px;
   padding: 1rem;
   background-color: $monut-tertiary-color;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(33,33,33,.5);
 
-  @media only screen and (max-width: 375px) {
-    width: 100%;
+  text-align: center;
+  box-shadow: 5px 5px 0 1px $monut-black;
+  transition: 0.5s;
+
+  &:hover {
+    transform: translateX(5px) translateY(5px);
+    box-shadow: unset;
+  }
+
+  @media only screen and (min-width: 785px) {
+    width: 30%;
   }
 
   span {
-    color: #b5838d;
+    cursor: pointer;
+    color: $monut-primary-color;
     font-weight: 500;
   }
 
   button {
+    cursor: pointer;
     background: $monut-tertiary-color;
     border-radius: 10px;
     display: inline-block;
