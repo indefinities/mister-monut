@@ -41,9 +41,13 @@
         </svg>
       </div>
 
-      <div class="monut-title__online-order">
+      <div class="monut-title__buttons">
         <monut-button url="https://mister-monut.square.site/">
           online ordering available
+        </monut-button>
+
+        <monut-button url="https://forms.gle/b2CxibyFb9FigMwEA">
+          university catering form
         </monut-button>
       </div>
 
@@ -110,10 +114,16 @@ export default {
     margin-top: 15vh;
   }
 
-  &__online-order {
+  &__buttons {
     margin: 5vh 0;
     display: flex;
-    justify-content: center;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-between;
+
+    .monut-button {
+      margin: 1rem;
+    }
   }
 
   &__munch {
