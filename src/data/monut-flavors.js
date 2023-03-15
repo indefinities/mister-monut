@@ -40,7 +40,7 @@ const monutFlavors = [
     desc: "A monut topped with a fresh honeydew glaze, and a sugar flower."
   },
   {
-    name: "Biscoff",
+    name: "Caramel Biscoff",
     file: "biscoff",
     desc: "A monut topped with a biscuit-flavored glaze topped with a cookie."
   },

@@ -102,6 +102,21 @@ const kroffleFlavors = [
         price: luxuryPrice,
         desc: 'A kroffle topped with fresh whipped cream and assorted seasonal fruits.',
     },
+    {
+        name: 'BBQ Bacon Melt',
+        file: 'bacon-melt',
+        type: 'premium',
+        price: luxuryPrice,
+        desc: '',
+    },
+    {
+        name: 'BBQ Ham, Bacon, & Jalapeño',
+        file: 'bacon-ham-jalapeno',
+        type: 'premium',
+        price: luxuryPrice,
+        desc: '',
+    },
+
     // {
     //     name: 'Matcha Pistachio',
     //     file: 'pistachio',

@@ -43,11 +43,11 @@
 
       <div class="monut-title__buttons">
         <monut-button url="https://mister-monut.square.site/">
-          online ordering available
+          💁 online ordering available
         </monut-button>
 
         <monut-button url="https://forms.gle/b2CxibyFb9FigMwEA">
-          university catering form
+          🙋 university catering form
         </monut-button>
       </div>
 
@@ -115,7 +115,7 @@ export default {
   }
 
   &__buttons {
-    margin: 5vh 0;
+    margin: 5% 0;
     display: flex;
     flex-flow: column wrap;
     align-content: center;
@@ -132,28 +132,6 @@ export default {
     &__arrow {
       position: absolute;
       left: calc(50% - 30px);
-      animation: jump-infinite 1.5s infinite;
-
-      &:after {
-        position: absolute;
-        left: -10px;
-        transform: rotateZ(45deg);
-      }
-    }
-
-    @keyframes jump-infinite {
-      0% {
-        padding-top: 0;
-        opacity: 25%;
-      }
-      50% {
-        padding-top: 20px;
-        opacity: 100%;
-      }
-      100% {
-        padding-top: 0;
-        opacity: 25%;
-      }
     }
   }
 }
