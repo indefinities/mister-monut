@@ -19,11 +19,6 @@
               <li>
                 <router-link to="/" @click="this.drawerActions()" >Home</router-link>
               </li>
-                <li @click="this.drawerActions()"
-                    v-for="(item, index) in items"
-                    :key="index">
-                    <a :href="item.id">{{ item.title }}</a>
-                </li>
               <li @click="this.drawerActions()">
                 <router-link to="/menu/">Menu & Prices</router-link>
               </li>
@@ -38,16 +33,6 @@ export default {
     data() {
         return {
             openMenu: false,
-            items: [
-                {
-                    title:'Info',
-                    id: '#info'
-                },
-                {
-                    title:'Flavors',
-                    id: '#menu'
-                },
-            ]
         }
     },
   methods: {

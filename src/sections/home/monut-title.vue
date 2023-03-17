@@ -40,6 +40,17 @@
           </g>
         </svg>
       </div>
+
+      <div class="monut-title__buttons">
+        <monut-button url="https://mister-monut.square.site/">
+          💁 online ordering available
+        </monut-button>
+
+        <monut-button url="https://forms.gle/B25KkkKbBmnCMPkE9">
+          🙋 online catering form
+        </monut-button>
+      </div>
+
       <div class="monut-title__munch">
         <p><em>munch on a monut</em></p>
         <div
@@ -55,10 +66,12 @@
 
 <script>
 import {monutPage} from "../../components/component-export.js";
+import MonutButton from "../../components/monut-button.vue";
 
 export default {
   name: "monut-title",
   components: {
+    MonutButton,
     monutPage,
   },
 };
@@ -89,11 +102,11 @@ export default {
     svg {
       display: block;
       margin: auto;
-      height: 30vh;
+      height: 60vh;
 
-      @media screen and (min-width: 768px) {
-        height: 60vh;
-      }
+      //@media screen and (min-width: 768px) {
+      //
+      //}
     }
   }
 
@@ -101,35 +114,29 @@ export default {
     margin-top: 15vh;
   }
 
+  &__buttons {
+    width: 100%;
+    margin: 5% 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-between;
+
+    .monut-button {
+      margin: 1rem;
+
+      @media screen and (min-width: 768px) {
+        width: 50%;
+      }
+    }
+  }
+
   &__munch {
-    margin-top: 10vh;
     text-align: center;
 
     &__arrow {
       position: absolute;
       left: calc(50% - 30px);
-      animation: jump-infinite 1.5s infinite;
-
-      &:after {
-        position: absolute;
-        left: -10px;
-        transform: rotateZ(45deg);
-      }
-    }
-
-    @keyframes jump-infinite {
-      0% {
-        padding-top: 0;
-        opacity: 25%;
-      }
-      50% {
-        padding-top: 20px;
-        opacity: 100%;
-      }
-      100% {
-        padding-top: 0;
-        opacity: 25%;
-      }
     }
   }
 }
