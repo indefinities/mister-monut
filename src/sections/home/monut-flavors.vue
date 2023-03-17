@@ -1,7 +1,7 @@
 <template>
   <section class="monut-flavors" id="menu">
     <monut-page>
-      <h1>Weekly Flavors</h1>
+      <h1>Our Flavors</h1>
 
       <div class="monut-flavors__section">
 

@@ -46,8 +46,8 @@
           💁 online ordering available
         </monut-button>
 
-        <monut-button url="https://forms.gle/b2CxibyFb9FigMwEA">
-          🙋 university catering form
+        <monut-button url="https://forms.gle/B25KkkKbBmnCMPkE9">
+          🙋 online catering form
         </monut-button>
       </div>
 
@@ -102,11 +102,11 @@ export default {
     svg {
       display: block;
       margin: auto;
-      height: 30vh;
+      height: 60vh;
 
-      @media screen and (min-width: 768px) {
-        height: 60vh;
-      }
+      //@media screen and (min-width: 768px) {
+      //
+      //}
     }
   }
 
@@ -115,6 +115,7 @@ export default {
   }
 
   &__buttons {
+    width: 100%;
     margin: 5% 0;
     display: flex;
     flex-flow: column wrap;
@@ -123,6 +124,10 @@ export default {
 
     .monut-button {
       margin: 1rem;
+
+      @media screen and (min-width: 768px) {
+        width: 50%;
+      }
     }
   }
 

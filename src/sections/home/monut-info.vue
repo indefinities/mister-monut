@@ -11,7 +11,7 @@
 
       <div class="monut-info__section">
         <h3>Serving the Waltham Community
-          from Wednesday 👉 Sunday</h3>
+          from Wednesday 👉 Sunday 🏃💨</h3>
 
         <div class="monut-info__gallery">
           <img v-for="n in 3"
@@ -102,7 +102,6 @@ export default {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin: 1em 0;
 
     &--image {
       width: 100%;
