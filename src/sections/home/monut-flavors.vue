@@ -1,6 +1,6 @@
 <template>
-  <section class="monut-flavors" id="menu">
-    <monut-page>
+  <section id="menu" class="monut-flavors centered-section">
+    <div class="centered-page">
       <h1>Weekly Flavors</h1>
 
       <div class="monut-flavors__section">
@@ -51,25 +51,22 @@
 
         <div class="monut-flavors__flavors">
           <monut-card
-          v-for="(monut, index) in monutFlavors" :key="index"
-          :image="imageSrc('monuts', monut.file)">
-                  <template #title>
-                    <h2>
-                      {{ monut.name }}
-                    </h2>
-                  </template>
-
-                  <template #desc>
-                    <p>
-                      {{ monut.desc }}
-                    </p>
-                  </template>
-
+              v-for="(monut, index) in monutFlavors" :key="index"
+              :image="imageSrc('monuts', monut.file)">
+            <template #title>
+              <h2>
+                {{ monut.name }}
+              </h2>
+            </template>
+            <!--                  <template #desc>-->
+            <!--                    <p>-->
+            <!--                      {{ monut.desc }}-->
+            <!--                    </p>-->
+            <!--                  </template>-->
           </monut-card>
         </div>
       </div>
-      
-    </monut-page>
+    </div>
   </section>
 </template>
 
@@ -80,7 +77,6 @@ import {
 } from '../../data/flavors.js';
 
 import {
-  monutPage,
   monutCard,
 } from '../../components/component-export.js'
 
@@ -88,7 +84,6 @@ export default {
   name: 'monut-flavors',
   components: {
     monutCard,
-    monutPage
   },
   data() {
     return {

@@ -35,15 +35,20 @@ const monutFlavors = [
     desc: "A monut topped with a sweet taro glaze and shredded coconut.",
   },
   {
-    name: "Honeydew",
-    file: "honeydew",
-    desc: "A monut topped with a fresh honeydew glaze, and a sugar flower."
-  },
-  {
     name: "Biscoff",
     file: "biscoff",
     desc: "A monut topped with a biscuit-flavored glaze topped with a cookie."
   },
+  {
+    name: "Blueberry",
+    file: "blueberry",
+    desc: ""
+  },
+  // {
+  //   name: "Honeydew",
+  //   file: "honeydew",
+  //   desc: "A monut topped with a fresh honeydew glaze, and a sugar flower."
+  // },
   // {
   //   name: "Matcha",
   //   file:"matcha",

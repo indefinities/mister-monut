@@ -26,10 +26,11 @@ export default {
 @import "../styles/_base";
 
 .monut-footer {
+  width: 100%;
+  padding: 1vh 0;
   text-align: center;
   background-color: $monut-secondary-color;
-  width: 100vw;
-  padding: 1vh 0;
+
 
   a, p {
     color: $monut-primary-color;

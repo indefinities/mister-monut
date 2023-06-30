@@ -5,9 +5,7 @@
     background-color: $monut-primary-color;
 }
 
-body {
-    max-width: 100%;
-    overflow: hidden visible;
+html, body, section {
     margin: 0;
     padding: 0;
 }
@@ -39,4 +37,21 @@ p {
     color: $monut-black;
     font-size: $monut-text;
     margin: 0;
+}
+
+.centered-page {
+    width: 100%;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.centered-section {
+    max-width: 960px;
+    margin: 1em;
+
+    @media (min-width: 768px) {
+        margin: 2em;
+    }
 }

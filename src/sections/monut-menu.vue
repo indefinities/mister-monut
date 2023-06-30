@@ -4,7 +4,6 @@
       <h1>Menu & Prices</h1>
     </div>
 
-
     <div class="monut-menu__container">
       <div v-for="(m, index) in menu" :key="index">
         <h2>{{ m.category }}</h2>
@@ -40,11 +39,13 @@
 <script>
 import {kroffleFlavors, monutFlavors} from "../data/flavors.js";
 import beverages from "../data/beverages.js";
-import MonutButton from "../components/monut-button.vue";
+import monutButton from "../components/monut-button.vue";
 
 export default {
   name: "monut-menu",
-  components: {MonutButton},
+  components: {
+    monutButton
+  },
   data() {
     return {
       menu: [

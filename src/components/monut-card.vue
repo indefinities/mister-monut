@@ -5,7 +5,7 @@
 
     <div class="monut-card__content">
         <slot name="title" />
-        <slot name="desc" />
+<!--        <slot name="desc" />-->
     </div>
 
   </div>

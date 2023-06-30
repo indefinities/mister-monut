@@ -1,6 +1,22 @@
 <template>
-    <div class="monut-nav">
-        <div v-if="!this.openMenu" class="monut-nav__bar">
+    <nav class="monut-nav">
+      <div v-if="!isMobile" >
+        <ul class="monut-nav__bar">
+          <li>
+            <router-link to="/">Home</router-link>
+          </li>
+          <li
+              v-for="(s, i) in sections"
+              @click="scrollToSection(s.id)" :key="i">
+            {{ s.title }}
+          </li>
+          <li>
+            <router-link to="/menu/">Menu & Prices</router-link>
+          </li>
+        </ul>
+      </div>
+
+        <div v-if="isMobile && !this.openMenu" class="monut-nav__bar">
           <div @click="this.drawerActions()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
               <path fill="#6d6875" d="M62.16 200.16h1075.6v156H62.16zM62.16 522h1075.6v156H62.16zM62.16 843.84h1075.6v156H62.16z"/>
@@ -9,6 +25,7 @@
 
         </div>
 
+<!--      IF THE MENU IS EXPANDED-->
         <div class="monut-nav__menu" v-if="this.openMenu">
           <div class="monut-nav__menu--close" @click="this.drawerActions()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
@@ -17,19 +34,19 @@
           </div>
             <ul>
               <li>
-                <router-link to="/" @click="this.drawerActions()" >Home</router-link>
+                <router-link to="/">Home</router-link>
               </li>
-                <li @click="this.drawerActions()"
-                    v-for="(item, index) in items"
-                    :key="index">
-                    <a :href="item.id">{{ item.title }}</a>
+                <li
+                    v-for="(s, i) in sections"
+                    @click="scrollToSection(s.id)" :key="i">
+                  {{ s.title }}
                 </li>
-              <li @click="this.drawerActions()">
+              <li>
                 <router-link to="/menu/">Menu & Prices</router-link>
               </li>
             </ul>
         </div>
-    </div>
+    </nav>
 </template>
 
 <script lang="js">
@@ -38,22 +55,41 @@ export default {
     data() {
         return {
             openMenu: false,
-            items: [
-                {
-                    title:'Info',
-                    id: '#info'
-                },
-                {
-                    title:'Flavors',
-                    id: '#menu'
-                },
-            ]
+            isMobile: false,
+            sections: [
+                  {
+                      title:'Info',
+                      id: '#info',
+                  },
+                  {
+                      title:'Flavors',
+                      id: '#menu',
+                  },
+              ]
         }
     },
   methods: {
-      drawerActions() {
+    /**
+     * Opens or closes the menu depending on the state of the menu.
+     */
+    drawerActions() {
         this.openMenu = !this.openMenu;
-      }
+    },
+
+    /**
+     * Smoothly scrolls to the section of the website corresponding to the ID
+     * @param id
+     */
+    scrollToSection(id) {
+      const element = document.getElementById(id);
+      element.scrollIntoView({
+        behavior:'smooth',
+      });
+    }
+  },
+  mounted() {
+    // Checks if the window is on a mobile device when mounted
+    this.isMobile = window.matchMedia('(max-width: 768px)').matches;
   }
 }
 </script>
@@ -62,16 +98,32 @@ export default {
 @import '../styles/base.scss';
 
 .monut-nav {
-    z-index: 1;
-    min-width: 100%;
+    width: 100%;
+    z-index: 100;
     position: fixed;
     top: 0;
-    font-size: 18pt;
+    left: 0;
+    color: $monut-tertiary-color;
+    font-size: $monut-text;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+      li {
+        cursor: pointer;
+        margin: 0 10px;
+      }
+    }
 
     &__bar {
-      display: flex;
-      align-items: baseline;
-      justify-content: flex-start;
+      width: 100%;
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      margin: 1em 0;
       background-color: $monut-primary-color;
 
       svg {
@@ -83,7 +135,6 @@ export default {
     }
 
   &__menu {
-    z-index: 1;
     margin-right: 0;
     width: 100vw;
     height: 100vh;
@@ -100,27 +151,7 @@ export default {
         padding-right: 2vw;
 
       }
-
-
     }
   }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  a {
-    color: $monut-tertiary-color;
-    font-size: 64px;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-  }
-
-
 }
 </style>

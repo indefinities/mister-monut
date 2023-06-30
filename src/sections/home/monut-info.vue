@@ -1,6 +1,6 @@
 <template>
-  <section id="info" class="monut-info">
-    <monut-page>
+  <section id="info" class="monut-info centered-page">
+    <div class="centered-section">
       <div class="monut-info__insta">
         <h1>📷 Instagram</h1>
         <instagram-embed/>
@@ -24,20 +24,18 @@
           <monut-store-sign/>
         </div>
       </div>
-
-    </monut-page>
+    </div>
   </section>
 </template>
 
 <script>
-import {instagramEmbed, monutPage, monutStoreSign} from "../../components/component-export.js";
+import {instagramEmbed, monutStoreSign} from "../../components/component-export.js";
 
 export default {
   name: 'monut-info',
   components: {
     monutStoreSign,
-    monutPage,
-    instagramEmbed
+    instagramEmbed,
   }
 }
 </script>
@@ -47,13 +45,10 @@ export default {
 
 .monut-info {
   &__insta {
-    margin-bottom: 10vh;
     width: 100%;
   }
 
   &__address {
-    margin-left: 5vw;
-
     a {
       color: $monut-secondary-color;
     }
