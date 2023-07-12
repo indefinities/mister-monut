@@ -40,6 +40,11 @@
           </g>
         </svg>
       </div>
+      <div class="monut-title__actions">
+        <monut-button url="https://mister-monut.square.site/">
+          🚙💨 ORDER ONLINE USING SQUARE
+        </monut-button>
+      </div>
       <div class="monut-title__munch">
         <p><em>munch on a monut</em></p>
         <div
@@ -54,11 +59,13 @@
 </template>
 
 <script>
-import {monutPage} from "../../components/component-export.js";
+import { monutPage } from "../../components/component-export.js";
+import monutButton from "../../components/monut-button.vue";
 
 export default {
   name: "monut-title",
   components: {
+    monutButton,
     monutPage,
   },
 };
@@ -131,6 +138,14 @@ export default {
         opacity: 25%;
       }
     }
+  }
+
+  &__actions {
+    margin-top: 4em;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
   }
 }
 </style>

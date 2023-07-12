@@ -9,7 +9,7 @@
     </div>
 
     <div v-if="url">
-      <button @click="toLink" formtarget="_blank" >
+      <button @click="toLink(url)" >
           <span>
             <slot />
           </span>
@@ -40,15 +40,15 @@ export default {
       required: false,
     }
   },
-  computed: {
+  methods: {
     /**
      * The action the button should take to go to the link
      * @returns {string}
      */
-    toLink() {
-      return window.location.href = this.url;
+    toLink(link) {
+      window.open(link, "_blank");
     },
-  },
+  }
 }
 </script>
 
@@ -56,24 +56,32 @@ export default {
 @import "../styles/_base.scss";
 
 .monut-button {
-  width: 30%;
-  border-radius: 10px;
-  padding: 1rem;
-  background-color: $monut-tertiary-color;
   cursor: pointer;
+  padding: 0.5em 0;
+  width: 100%;
+  border-radius: 10px;
+  background-color: $monut-tertiary-color;
   text-align: center;
-  box-shadow: 0 0 20px rgba(33,33,33,.5);
+  box-shadow: 5px 5px 0 $monut-secondary-color;
+  transition: 0.3s;
 
-  @media only screen and (max-width: 375px) {
-    width: 100%;
+  &:hover {
+    box-shadow: unset;
+    transform: translate(5px, 5px);
+  }
+
+  @media (min-width: 375px) {
+    width: 50%;
+    padding: 1em;
   }
 
   span {
-    color: #b5838d;
+    color: $monut-primary-color;
     font-weight: 500;
   }
 
   button {
+    cursor: pointer;
     background: $monut-tertiary-color;
     border-radius: 10px;
     display: inline-block;

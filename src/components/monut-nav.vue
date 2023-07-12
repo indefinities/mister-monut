@@ -25,7 +25,7 @@
                     <a :href="item.id">{{ item.title }}</a>
                 </li>
               <li @click="this.drawerActions()">
-                <router-link to="/menu/">Menu & Prices</router-link>
+                <a href="/images/menu.png">Menu & Prices</a>
               </li>
             </ul>
         </div>
