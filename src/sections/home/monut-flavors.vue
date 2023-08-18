@@ -71,14 +71,12 @@
 </template>
 
 <script>
-import {
-  kroffleFlavors,
-  monutFlavors
-} from '../../data/flavors.js';
+import { Client, Environment } from "square";
 
 import {
   monutCard,
 } from '../../components/component-export.js'
+import { kroffleFlavors, monutFlavors } from "../../data/flavors.js";
 
 export default {
   name: 'monut-flavors',
@@ -87,14 +85,38 @@ export default {
   },
   data() {
     return {
-      kroffleFlavors: kroffleFlavors,
+      kroffleFlavors,
       monutFlavors,
     }
   },
   methods: {
     imageSrc(folderName, fileName) {
       return `/images/${folderName}/${fileName}.jpg`;
+    },
+    /**
+     * Makes an API call to retrieve all the menu items from Mister Monut Square
+     * @param client
+     * @returns {Promise<void>}
+     */
+    async fetchMenuItems(client) {
+      try {
+        const response = await client.catalogApi.listCatalog(undefined,
+            'category,tax');
+        // const response = await client.catalogApi.retrieveCatalogObject('W62UWFY35CWMYGVWK6TWJDNI');
+        console.log(response.result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     }
+  },
+
+  mounted() {
+    const c = new Client({
+      accessToken: import.meta.env.VUE_APP_SQUARE_ACCESS_TOKEN,
+      environment: Environment.Sandbox,
+    });
+
+    this.fetchMenuItems(c);
   }
 }
 </script>
