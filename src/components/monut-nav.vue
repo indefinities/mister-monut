@@ -11,7 +11,7 @@
             {{ s.title }}
           </li>
           <li>
-            <router-link to="/menu/">Menu & Prices</router-link>
+            <a href="/images/menu.png">Menu & Prices</a>
           </li>
         </ul>
       </div>
@@ -59,11 +59,11 @@ export default {
             sections: [
                   {
                       title:'Info',
-                      id: '#info',
+                      id: 'info',
                   },
                   {
                       title:'Flavors',
-                      id: '#menu',
+                      id: 'menu',
                   },
               ]
         }

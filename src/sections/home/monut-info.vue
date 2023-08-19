@@ -1,5 +1,5 @@
 <template>
-  <section id="info" class="monut-info centered-page">
+  <section id="info" class="monut-info centered-page" data-aos="fade-up">
     <div class="centered-section">
       <div class="monut-info__insta">
         <h1>📷 Instagram</h1>

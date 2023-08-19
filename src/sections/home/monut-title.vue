@@ -1,5 +1,5 @@
 <template>
-  <section class="monut-title">
+  <section class="monut-title" data-aos="fade-up">
       <div class="monut-title__subtitle">
         <p><em>munch on a monut</em></p>
         <div
