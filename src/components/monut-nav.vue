@@ -62,7 +62,7 @@ export default {
                       id: 'info',
                   },
                   {
-                      title:'Flavors',
+                      title:'Products',
                       id: 'menu',
                   },
               ]
@@ -105,11 +105,17 @@ export default {
     left: 0;
     color: $monut-tertiary-color;
     font-size: $monut-text;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 1vw;
 
     ul {
+      width: 90vw;
       list-style-type: none;
       margin: 0;
-      padding: 0;
+      padding: 0 1vw;
       overflow: hidden;
 
       li {
@@ -119,12 +125,13 @@ export default {
     }
 
     &__bar {
-      width: 100%;
+      background-color: $monut-primary-color;
+      border-radius: 25px;
+      border: 1px dashed $monut-secondary-color;
       display: inline-flex;
       flex-flow: row wrap;
-      justify-content: flex-end;
-      margin: 1em 0;
-      background-color: $monut-primary-color;
+      justify-content: center;
+      align-items: center;
 
       svg {
         cursor: pointer;

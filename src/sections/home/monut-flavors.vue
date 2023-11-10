@@ -1,11 +1,10 @@
 <template>
-  <section id="menu" class="monut-flavors centered-section">
-    <div class="centered-page">
+  <section id="menu" class="monut-flavors">
+    <div>
       <h1>Weekly Flavors</h1>
 
       <div class="monut-flavors__section">
-
-        <img src="/images/kroffles/cover.jpg" alt="person dressing a kroffle"/>
+        <div id="kroffle-cover"/>
 
         <div class="monut-flavors__title">
           <h2>🧇 Kroffles</h2>
@@ -17,30 +16,18 @@
 
         <div class="monut-flavors__flavors">
           <monut-card
-              v-for="(kroffle, index) in kroffleFlavors" :key="index"
-              :image="imageSrc('kroffles', kroffle.file)">
-
+              v-for="(k, index) in kroffles" :key="index"
+              :image="imageSrc('kroffles', k.file)">
             <template #title>
-              <h2>
-                {{ kroffle.name }}
-              </h2>
+              <h2>{{ k.name }}</h2>
             </template>
-
-            <template #desc>
-              <p>
-                {{ kroffle.desc }}
-              </p>
-            </template>
-
           </monut-card>
         </div>
       </div>
 
 
       <div class="monut-flavors__section">
-
-        <img src="/images/monuts/cover.jpg" alt="monuts on display in-store"/>
-
+        <div id="monut-cover"/>
         <div class="monut-flavors__title">
           <h2>🍩 Monuts</h2>
           <p>
@@ -51,18 +38,13 @@
 
         <div class="monut-flavors__flavors">
           <monut-card
-              v-for="(monut, index) in monutFlavors" :key="index"
-              :image="imageSrc('monuts', monut.file)">
+              v-for="(m, index) in monuts" :key="index"
+              :image="imageSrc('monuts', m.file)">
             <template #title>
               <h2>
-                {{ monut.name }}
+                {{ m.name }}
               </h2>
             </template>
-            <!--                  <template #desc>-->
-            <!--                    <p>-->
-            <!--                      {{ monut.desc }}-->
-            <!--                    </p>-->
-            <!--                  </template>-->
           </monut-card>
         </div>
       </div>
@@ -89,6 +71,14 @@ export default {
       monutFlavors,
     }
   },
+  computed: {
+    kroffles() {
+      return this.kroffleFlavors.slice(2);
+    },
+    monuts() {
+      return this.monutFlavors.slice(2);
+    }
+  },
   methods: {
     imageSrc(folderName, fileName) {
       return `/images/${folderName}/${fileName}.jpg`;
@@ -111,27 +101,34 @@ export default {
   },
 
   mounted() {
-    const c = new Client({
-      accessToken: import.meta.env.VUE_APP_SQUARE_ACCESS_TOKEN,
-      environment: Environment.Sandbox,
-    });
-
-    this.fetchMenuItems(c);
+    // const c = new Client({
+    //   accessToken: import.meta.env.VUE_APP_SQUARE_ACCESS_TOKEN,
+    //   environment: Environment.Sandbox,
+    // });
+    // this.fetchMenuItems(c);
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .monut-flavors {
-  &__section {
-    margin: 10vh 0;
+  margin-top: 35vh;
+  width: 100%;
 
-    img {
-      margin: 1vh 0;
-      width: 100%;
-      border-radius: 10px;
-    }
+  @mixin cover-img($img-url) {
+    width: 100%;
+    height: 75vh;
+    background: center / cover no-repeat url($img-url);
   }
+
+  #kroffle-cover {
+    @include cover-img("/images/kroffles/cover.jpg");
+  }
+
+  #monut-cover {
+    @include cover-img("/images/monuts/cover.jpg");
+  }
+
 
   &__title {
     margin: 2vh 0;

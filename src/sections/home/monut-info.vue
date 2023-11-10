@@ -57,7 +57,6 @@ export default {
   &__location {
     margin: 5vh 0;
 
-
     iframe {
       width: 100%;
       height: 500px;

@@ -7,7 +7,7 @@ import {
 
 <template>
   <monut-nav />
-  <router-view />
+    <router-view />
   <monut-footer />
 </template>
 
