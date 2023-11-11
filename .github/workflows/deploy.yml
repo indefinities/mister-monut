@@ -21,13 +21,28 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install pnpm
+        run: npm install --global pnpm
       - name: "Install pnpm"
         run: pnpm install
+        
+      - name: Cache .pnpm-store
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
   build-project:
     runs-on: ubuntu-latest
     steps:
       - name: "Build project"
-        run: pnpm run build
+        run: pnpm build
   add-and-commit-dist:
     runs-on: ubuntu-latest
     steps:
