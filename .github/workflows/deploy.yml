@@ -16,11 +16,12 @@ concurrency:
   cancel-in-progress: true
   
 jobs:
-  install-npm:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        
       - name: Set up Node
         uses: actions/setup-node@v3
           
@@ -37,24 +38,19 @@ jobs:
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
-  build-project:
-    runs-on: ubuntu-latest
-    steps:
+            
       - name: "Build project"
         run: pnpm build
-  add-and-commit-dist:
-    runs-on: ubuntu-latest
-    steps:
+        
       - name: Setup Pages
         uses: actions/configure-pages@v3
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload dist repository
           path: './dist'
-  push-to-gh-pages:
-    runs-on: ubuntu-latest
-    steps:
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
