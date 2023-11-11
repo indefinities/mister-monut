@@ -26,6 +26,8 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+      - name: Install npm
+        run: npm install
       - name: Install pnpm
         run: npm install --global pnpm
       - name: "Install pnpm"
