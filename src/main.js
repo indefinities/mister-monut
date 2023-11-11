@@ -6,13 +6,11 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import {
     monutHome,
-    monutMenu,
 } from './sections/sections-export.js';
 
 
 const routes = [
     { path: '/', component: monutHome },
-    { path: '/menu/', component: monutMenu },
 ]
 
 const router = createRouter({

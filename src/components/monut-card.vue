@@ -36,7 +36,7 @@ export default {
   transition: box-shadow .3s;
 
   @media screen and (min-width: 768px) {
-    width: 30%;
+    width: 30vw;
   }
 
   &:hover {

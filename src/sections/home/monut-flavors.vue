@@ -1,11 +1,10 @@
 <template>
   <section id="menu" class="monut-flavors">
-    <div>
+    <div class="centered-page">
       <h1>Weekly Flavors</h1>
+      <div id="kroffle-cover"/>
 
-      <div class="monut-flavors__section">
-        <div id="kroffle-cover"/>
-
+      <div class="monut-flavors__section centered-section">
         <div class="monut-flavors__title">
           <h2>🧇 Kroffles</h2>
           <p>
@@ -13,20 +12,20 @@
             A <a href="https://en.wikipedia.org/wiki/Croffle" target="_blank">kroffle</a> is a hybrid between a croissant and a waffle, originating from South Korea.
           </p>
         </div>
+      </div>
 
-        <div class="monut-flavors__flavors">
-          <monut-card
-              v-for="(k, index) in kroffles" :key="index"
-              :image="imageSrc('kroffles', k.file)">
-            <template #title>
-              <h2>{{ k.name }}</h2>
-            </template>
-          </monut-card>
-        </div>
+      <div class="monut-flavors__flavors">
+        <monut-card
+            v-for="(k, index) in kroffles" :key="index"
+            :image="imageSrc('kroffles', k.file)">
+          <template #title>
+            <h2>{{ k.name }}</h2>
+          </template>
+        </monut-card>
       </div>
 
 
-      <div class="monut-flavors__section">
+      <div class="monut-flavors__section centered-section">
         <div id="monut-cover"/>
         <div class="monut-flavors__title">
           <h2>🍩 Monuts</h2>
@@ -35,18 +34,18 @@
             A <a href="https://en.wikipedia.org/wiki/Mochi_donuts" target="_blank">monut</a> is a pastry which combines the light fluffiness of an American donut with the chewiness of Japanese mochi into one delicious, satisfying pastry.
           </p>
         </div>
+      </div>
 
-        <div class="monut-flavors__flavors">
-          <monut-card
-              v-for="(m, index) in monuts" :key="index"
-              :image="imageSrc('monuts', m.file)">
-            <template #title>
-              <h2>
-                {{ m.name }}
-              </h2>
-            </template>
-          </monut-card>
-        </div>
+      <div class="monut-flavors__flavors">
+        <monut-card
+            v-for="(m, index) in monuts" :key="index"
+            :image="imageSrc('monuts', m.file)">
+          <template #title>
+            <h2>
+              {{ m.name }}
+            </h2>
+          </template>
+        </monut-card>
       </div>
     </div>
   </section>
@@ -58,7 +57,6 @@ import { Client, Environment } from "square";
 import {
   monutCard,
 } from '../../components/component-export.js'
-import { kroffleFlavors, monutFlavors } from "../../data/flavors.js";
 
 export default {
   name: 'monut-flavors',
@@ -67,16 +65,26 @@ export default {
   },
   data() {
     return {
-      kroffleFlavors,
-      monutFlavors,
-    }
-  },
-  computed: {
-    kroffles() {
-      return this.kroffleFlavors.slice(2);
-    },
-    monuts() {
-      return this.monutFlavors.slice(2);
+      kroffles: [
+        {
+          name: 'Banana Nutella',
+          file: 'banana-nutella',
+        },
+        {
+          name: 'Mixed Fruits',
+          file: 'colorful-fruits',
+        },
+      ],
+      monuts: [
+        {
+          name: "Cinnamon Sugar",
+          file:"cinnamon-sugar"
+        },
+        {
+          name: "Fruity Pebbles",
+          file:"fruity-pebbles"
+        },
+      ]
     }
   },
   methods: {
@@ -129,6 +137,9 @@ export default {
     @include cover-img("/images/monuts/cover.jpg");
   }
 
+  h1 {
+    margin: 3vh 0;
+  }
 
   &__title {
     margin: 2vh 0;
@@ -139,6 +150,7 @@ export default {
   }
 
   &__flavors {
+    margin-bottom: 25vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;

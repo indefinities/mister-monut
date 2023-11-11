@@ -16,36 +16,34 @@
         </ul>
       </div>
 
-        <div v-if="isMobile && !this.openMenu" class="monut-nav__bar">
-          <div @click="this.drawerActions()">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
-              <path fill="#6d6875" d="M62.16 200.16h1075.6v156H62.16zM62.16 522h1075.6v156H62.16zM62.16 843.84h1075.6v156H62.16z"/>
-            </svg>
+        <nav v-if="isMobile" class="monut-nav__bar" :style="{ height: openMenu ? '40vh' : '5vh' }">
+          <div :class="`monut-nav__bar--menu${ openMenu ? '--active' : '' }`"
+              @click="drawerActions()"
+              aria-label="The hamburger menu button.">
+            <div v-for="index in (openMenu ? 2 : 3)"
+                 :key="index"
+                 class="monut-nav__bar--menu--bar"
+                 :style="{top: openMenu ? '' : `${10*(index - 1)}px`}"/>
           </div>
 
-        </div>
 
-<!--      IF THE MENU IS EXPANDED-->
-        <div class="monut-nav__menu" v-if="this.openMenu">
-          <div class="monut-nav__menu--close" @click="this.drawerActions()">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
-              <path fill="#6d6875" d="M600 30C285.6 30 30 285.6 30 600s255.6 570 570 570 570-255.6 570-570S914.4 30 600 30zm298.8 747.6L776.4 900 598.8 722.4 421.2 900 298.8 777.6 476.4 600 298.8 422.4 421.2 300l177.6 177.6L776.4 300l122.4 122.4L721.2 600z"/>
-            </svg>
-          </div>
-            <ul>
-              <li>
-                <router-link to="/">Home</router-link>
-              </li>
-                <li
-                    v-for="(s, i) in sections"
-                    @click="scrollToSection(s.id)" :key="i">
-                  {{ s.title }}
-                </li>
-              <li>
-                <router-link to="/menu/">Menu & Prices</router-link>
-              </li>
-            </ul>
-        </div>
+          <!-- IF THE MENU IS EXPANDED-->
+          <ul v-if="openMenu">
+            <li>
+              <router-link to="/">Home</router-link>
+            </li>
+            <li
+                v-for="(s, i) in sections"
+                @click="scrollToSection(s.id)" :key="i">
+              {{ s.title }}
+            </li>
+            <li>
+              <router-link to="/menu/">Menu & Prices</router-link>
+            </li>
+          </ul>
+        </nav>
+
+
     </nav>
 </template>
 
@@ -109,7 +107,7 @@ export default {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    padding: 1vh 1vw;
+    padding: 0.5vh 1vw;
 
     ul {
       width: 90vw;
@@ -120,24 +118,66 @@ export default {
 
       li {
         cursor: pointer;
-        margin: 0 10px;
+        margin: 1vh 1vw;
+
+        &:hover {
+          text-decoration: underline dotted;
+        }
       }
     }
 
     &__bar {
       background-color: $monut-primary-color;
+      border: 2px dashed $monut-secondary-color;
       border-radius: 25px;
-      border: 1px dashed $monut-secondary-color;
       display: inline-flex;
       flex-flow: row wrap;
       justify-content: center;
       align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
-      svg {
+      @media (max-width: 768px) {
+        width: 95vw;
+        justify-content: flex-end;
+        align-items: baseline;
+      }
+
+      &--menu {
+        margin-top: 10px;
+        margin-right: 5vw;
+        width: 35px;
+        height: auto;
         cursor: pointer;
-        padding-top: 2vh;
-        padding-left: 5vw;
-        width: 50px;
+        position: relative;
+
+        &--bar {
+          background-color: $monut-tertiary-color;
+          position: absolute;
+          width: 100%;
+          height: 5px;
+          left: 0;
+          transition: all 0.5s;
+        }
+
+        &--active {
+          margin: 0.5em 1em 0;
+          width: 35px;
+          height: auto;
+          cursor: pointer;
+          position: relative;
+
+          > :first-child {
+            top: 10px;
+            left: 0;
+            transform: rotate(45deg);
+          }
+
+          > :nth-child(2) {
+            top: 10px;
+            left: 0;
+            transform: rotate(-45deg);
+          }
+        }
       }
     }
 

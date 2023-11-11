@@ -24,8 +24,10 @@ jobs:
   add-and-commit-dist:
     runs-on: ubuntu-latest
     steps:
-      - name: "Add distribution folder to Git"
+      - name: "Add dist folder to Git"
         run: git add dist -f
+      - name: "Commit dist folder to Git"
+        run: git commit -m "Updating deployment on pushed version."
   push-to-gh-pages:
     runs-on: ubuntu-latest
     steps:

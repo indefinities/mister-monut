@@ -1,6 +1,8 @@
 <template>
   <section class="monut-title" data-aos="fade-up">
 
+    <img src="/images/logo.svg"/>
+
       <div class="monut-title__actions">
         <monut-button url="https://mister-monut.square.site/">
           🚙💨 ORDER ONLINE USING SQUARE
@@ -75,6 +77,25 @@ export default {
         padding-top: 0;
         opacity: 25%;
       }
+    }
+  }
+
+  &__actions {
+    margin: 3vh 0;
+    width: 100%;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    margin: inherit 1em;
+
+    @media (min-width: 768px) {
+      margin-top: 5vh;
+      width: 45vw;
+      max-width: 500px;
     }
   }
 }
