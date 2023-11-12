@@ -1,23 +1,21 @@
 <template>
   <section class="monut-title" data-aos="fade-up">
 
-    <img src="/images/logo.svg"/>
+    <img src="/images/logo-text.svg"/>
 
       <div class="monut-title__actions">
         <monut-button url="https://mister-monut.square.site/">
           🚙💨 ORDER ONLINE USING SQUARE
         </monut-button>
       </div>
-      <div class="monut-title__subtitle">
-        <p><em>munch on a monut</em></p>
-
+<!--      <div class="monut-title__subtitle">-->
 <!--        <div-->
 <!--            class="monut-title__footer__arrow">-->
 <!--          <svg fill="none" height="48" width="48" xmlns="http://www.w3.org/2000/svg">-->
 <!--            <path d="m14 20 10 10 10-10H14Z" fill="#323232"/>-->
 <!--          </svg>-->
 <!--        </div>-->
-      </div>
+<!--      </div>-->
   </section>
 </template>
 

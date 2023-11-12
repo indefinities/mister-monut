@@ -3,7 +3,9 @@
       <div v-if="!isMobile" >
         <ul class="monut-nav__bar">
           <li>
-            <router-link to="/">Home</router-link>
+            <router-link to="/">
+              Home
+            </router-link>
           </li>
           <li
               v-for="(s, i) in sections"
@@ -16,7 +18,8 @@
         </ul>
       </div>
 
-        <nav v-if="isMobile" class="monut-nav__bar" :style="{ height: openMenu ? '40vh' : '5vh' }">
+        <nav v-if="isMobile" class="monut-nav__bar" :style="{ height: openMenu ? '40vh' : '8vh' }">
+          <img src="/images/logo.svg"/>
           <div :class="`monut-nav__bar--menu${ openMenu ? '--active' : '' }`"
               @click="drawerActions()"
               aria-label="The hamburger menu button.">
@@ -126,6 +129,10 @@ export default {
       }
     }
 
+  img {
+    max-width: 47.75px;
+  }
+
     &__bar {
       background-color: $monut-primary-color;
       border: 2px dashed $monut-secondary-color;
@@ -138,13 +145,13 @@ export default {
 
       @media (max-width: 768px) {
         width: 95vw;
-        justify-content: flex-end;
-        align-items: baseline;
+        justify-content: space-between;
+        align-items: center;
       }
 
       &--menu {
-        margin-top: 10px;
         margin-right: 5vw;
+        margin-bottom: 3vh;
         width: 35px;
         height: auto;
         cursor: pointer;
