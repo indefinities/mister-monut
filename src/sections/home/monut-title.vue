@@ -1,20 +1,10 @@
 <template>
-  <section class="monut-title" data-aos="fade-up">
-
+  <section class="monut-title" id="top" data-aos="fade-up">
+    <div id="home-banner"/>
     <img src="/images/logo-text.svg"/>
-
-      <div class="monut-title__actions">
-        <monut-button url="https://mister-monut.square.site/">
-          🚙💨 ORDER ONLINE USING SQUARE
-        </monut-button>
-      </div>
-<!--      <div class="monut-title__subtitle">-->
-<!--        <div-->
-<!--            class="monut-title__footer__arrow">-->
-<!--          <svg fill="none" height="48" width="48" xmlns="http://www.w3.org/2000/svg">-->
-<!--            <path d="m14 20 10 10 10-10H14Z" fill="#323232"/>-->
-<!--          </svg>-->
-<!--        </div>-->
+    <monut-button url="https://mister-monut.square.site/">
+      🚙💨 ORDER ONLINE USING SQUARE
+    </monut-button>
 <!--      </div>-->
   </section>
 </template>
@@ -33,67 +23,27 @@ export default {
 @import "../../styles/_base.scss";
 
 .monut-title {
-  background: linear-gradient(0deg, $monut-primary-color 0%, rgba(255,229,217,0.3) 50%, rgba(255,229,217,0.3) 100%),
-      center / cover no-repeat url("/images/cover.jpg");
-  height: 95vh;
+  padding: 6vh 0;
+//linear-gradient(0deg, $monut-primary-color 0%, rgba(255,229,217,0.2) 50%, rgba(255,229,217,0.4) 80%, rgba(255,229,217,0.6) 90%, $monut-primary-color 100%)
+  height: 100vh;
   display: flex;
   flex-flow: column wrap;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
+  background-color: $monut-secondary-color;
 
-  &__subtitle {
+  #home-banner {
     width: 100%;
-    text-align: center;
-    display: inline-flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    align-items: center;
-
-
-    &__arrow {
-      position: absolute;
-      left: calc(50% - 30px);
-      animation: jump-infinite 1.5s infinite;
-
-      &:after {
-        position: absolute;
-        left: -10px;
-        transform: rotateZ(45deg);
-      }
-    }
-
-    @keyframes jump-infinite {
-      0% {
-        padding-top: 0;
-        opacity: 25%;
-      }
-      50% {
-        padding-top: 20px;
-        opacity: 100%;
-      }
-      100% {
-        padding-top: 0;
-        opacity: 25%;
-      }
-    }
-  }
-
-  &__actions {
-    margin: 3vh 0;
-    width: 100%;
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    height: 65vh;
+    background: center / cover no-repeat url("/images/cover.jpg");
   }
 
   img {
-    margin: inherit 1em;
+    margin: 0 5vw;
 
     @media (min-width: 768px) {
-      margin-top: 5vh;
-      width: 45vw;
-      max-width: 500px;
+      width: 25vw;
+      min-width: 375px;
     }
   }
 }

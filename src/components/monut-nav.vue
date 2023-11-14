@@ -1,5 +1,7 @@
 <template>
     <nav class="monut-nav">
+      <div class="monut-nav__up" @click="scrollToSection('top')"/>
+
       <div v-if="!isMobile" >
         <ul class="monut-nav__bar">
           <li>
@@ -13,7 +15,7 @@
             {{ s.title }}
           </li>
           <li>
-            <a href="/images/menu.png">Menu & Prices</a>
+            <a href="/images/menu.png">Menu</a>
           </li>
         </ul>
       </div>
@@ -102,8 +104,6 @@ export default {
     width: 100%;
     z-index: 100;
     position: fixed;
-    top: 0;
-    left: 0;
     color: $monut-tertiary-color;
     font-size: $monut-text;
     display: flex;
@@ -133,7 +133,42 @@ export default {
     max-width: 47.75px;
   }
 
+  &__up {
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 2vw;
+    padding: 5px;
+    margin: 30px auto;
+    background-color: $monut-black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+    box-shadow: 5px 5px 0 $monut-tertiary-color;
+
+    &:hover {
+      box-shadow: unset;
+      transform: translate(5px, 5px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 17px;
+      z-index: 110;
+      display: block;
+      width: 25px;
+      height: 25px;
+      border-top: 3px solid $monut-primary-color;
+      border-left: 3px solid $monut-primary-color;
+      top: 20px;
+      transform: rotate(45deg);
+    }
+  }
+
     &__bar {
+      top: 0;
       background-color: $monut-primary-color;
       border: 2px dashed $monut-secondary-color;
       border-radius: 25px;

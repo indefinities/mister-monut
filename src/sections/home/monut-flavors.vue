@@ -25,8 +25,8 @@
       </div>
 
 
+      <div id="monut-cover"/>
       <div class="monut-flavors__section centered-section">
-        <div id="monut-cover"/>
         <div class="monut-flavors__title">
           <h2>🍩 Monuts</h2>
           <p>
@@ -71,18 +71,50 @@ export default {
           file: 'banana-nutella',
         },
         {
+          name: 'Biscoff Cream',
+          file: 'biscoff-cream',
+        },
+        {
+          name: 'Blueberry Cream Cheese',
+          file: 'blueberry',
+        },
+        {
           name: 'Mixed Fruits',
           file: 'colorful-fruits',
         },
+        {
+          name: 'Oreo Cream',
+          file: 'oreo',
+        },
+        {
+          name: 'Strawberry Cream',
+          file: 'strawberry-cream',
+        },
       ],
       monuts: [
+        {
+          name: "Caramel Cookie",
+          file:"caramel-cookie",
+        },
         {
           name: "Cinnamon Sugar",
           file:"cinnamon-sugar"
         },
         {
+          name: "Cookies n Cream",
+          file:"cookies-n-cream"
+        },
+        {
           name: "Fruity Pebbles",
           file:"fruity-pebbles"
+        },
+        {
+          name: "Matcha",
+          file: "matcha"
+        },
+        {
+          name: "Taro Coconut",
+          file:"taro-coconut"
         },
       ]
     }
@@ -119,15 +151,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../styles/_base.scss";
+
 .monut-flavors {
   margin-top: 35vh;
   width: 100%;
-
-  @mixin cover-img($img-url) {
-    width: 100%;
-    height: 75vh;
-    background: center / cover no-repeat url($img-url);
-  }
 
   #kroffle-cover {
     @include cover-img("/images/kroffles/cover.jpg");
@@ -150,7 +178,7 @@ export default {
   }
 
   &__flavors {
-    margin-bottom: 25vh;
+    margin: 0 5vw 25vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;

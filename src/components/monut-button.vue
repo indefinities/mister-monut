@@ -60,9 +60,9 @@ export default {
   padding: 0.5em 0;
   width: 100%;
   border-radius: 10px;
-  background-color: $monut-tertiary-color;
+  background-color: $monut-black;
   text-align: center;
-  box-shadow: 5px 5px 0 $monut-secondary-color;
+  box-shadow: 5px 5px 0 $monut-tertiary-color;
   transition: 0.3s;
 
   &:hover {
@@ -83,7 +83,7 @@ export default {
   button {
     width: 100%;
     cursor: pointer;
-    background: $monut-tertiary-color;
+    background: $monut-black;
     border-radius: 10px;
     display: inline-block;
     border: 0;
