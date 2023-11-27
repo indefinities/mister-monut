@@ -20,7 +20,7 @@
         </ul>
       </div>
 
-        <nav v-if="isMobile" class="monut-nav__bar" :style="{ height: openMenu ? '40vh' : '8vh' }">
+        <nav v-if="isMobile" class="monut-nav__bar" :style="{ height: openMenu ? '50vh' : '8vh' }">
           <img src="/images/logo.svg"/>
           <div :class="`monut-nav__bar--menu${ openMenu ? '--active' : '' }`"
               @click="drawerActions()"
@@ -43,7 +43,10 @@
               {{ s.title }}
             </li>
             <li>
-              <router-link to="/menu/">Menu & Prices</router-link>
+              <a href="/images/menu.png">Menu</a>
+            </li>
+            <li>
+              <a href="https://mister-monut.square.site/" target="_blank">Order Online</a>
             </li>
           </ul>
         </nav>
@@ -176,7 +179,7 @@ export default {
       flex-flow: row wrap;
       justify-content: center;
       align-items: center;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
 
       @media (max-width: 768px) {
         width: 95vw;
