@@ -13,13 +13,13 @@
               Mon &amp; Tues: CLOSED
             </tspan>
             <tspan class="cls-1" x="-77.29" y="86.4">
-              Wed &amp; Thurs: 11AM - 7PM
+              Wed &amp; Thurs: 7:30AM - 7PM
             </tspan>
             <tspan x="-5.22" y="172.8">
-              Fri &amp; Sat: 11AM - 8PM
+              Fri &amp; Sat: 7:30AM - 7PM
             </tspan>
             <tspan x="71.35" y="259.2">
-              Sun: 11AM - 6PM
+              Sun: 8AM - 5PM
             </tspan>
           </text>
         </g>
