@@ -3,9 +3,17 @@
     <div id="home-banner"/>
     <img src="/images/logo-text.svg" alt="Mister Monut logo"/>
     <monut-button url="https://mister-monut.square.site/">
-      🚙💨 ORDER ONLINE USING SQUARE
+      🛍️ order online using square
     </monut-button>
-<!--      </div>-->
+    <monut-button url="https://mister-monut.square.site/s/gift-cards">
+      🎁 purchase a gift card
+    </monut-button>
+    <monut-button url="https://forms.gle/TC9CfFfYv1j4aRxb9">
+      catering request form
+    </monut-button>
+    <p>
+      <em>you will receive a 10% Visa gift card for any orders $150+!</em>
+    </p>
   </section>
 </template>
 
@@ -24,13 +32,11 @@ export default {
 
 .monut-title {
   padding: 6vh 0;
-//linear-gradient(0deg, $monut-primary-color 0%, rgba(255,229,217,0.2) 50%, rgba(255,229,217,0.4) 80%, rgba(255,229,217,0.6) 90%, $monut-primary-color 100%)
   height: 100%;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
-  background-color: $monut-secondary-color;
 
   #home-banner {
     width: 100%;
@@ -49,6 +55,15 @@ export default {
       width: 25vw;
       min-width: 375px;
     }
+  }
+
+  .monut-button {
+    margin: 1em;
+  }
+
+  p {
+    margin: 1em;
+    text-align: center;
   }
 }
 </style>

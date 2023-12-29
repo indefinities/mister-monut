@@ -1,9 +1,24 @@
 <template>
     <nav class="monut-nav">
+<!--      scroll to top button-->
       <div class="monut-nav__up" @click="scrollToSection('top')"/>
 
-      <div v-if="!isMobile" >
-        <ul class="monut-nav__bar">
+        <nav v-if="isMobile" class="monut-nav__bar">
+          <img src="/images/logo.svg"/>
+          <div :class="`monut-nav__bar--menu${ openMenu ? '--active' : '' }`"
+              @click="drawerActions()"
+              aria-label="The hamburger menu button.">
+            <div v-for="index in (openMenu ? 2 : 3)"
+                 :key="index"
+                 class="monut-nav__bar--menu--bar"
+                 :style="{top: openMenu ? '' : `${10*(index - 1)}px`}"/>
+          </div>
+        </nav>
+
+      <div v-if="!isMobile || openMenu">
+        <ul
+            :class="!isMobile ? 'monut-nav__bar' : ''"
+            :style="isMobile ? { paddingBottom: '4vh'} : {}">
           <li>
             <router-link to="/">
               Home
@@ -19,38 +34,6 @@
           </li>
         </ul>
       </div>
-
-        <nav v-if="isMobile" class="monut-nav__bar" :style="{ height: openMenu ? '50vh' : '8vh' }">
-          <img src="/images/logo.svg"/>
-          <div :class="`monut-nav__bar--menu${ openMenu ? '--active' : '' }`"
-              @click="drawerActions()"
-              aria-label="The hamburger menu button.">
-            <div v-for="index in (openMenu ? 2 : 3)"
-                 :key="index"
-                 class="monut-nav__bar--menu--bar"
-                 :style="{top: openMenu ? '' : `${10*(index - 1)}px`}"/>
-          </div>
-
-
-          <!-- IF THE MENU IS EXPANDED-->
-          <ul v-if="openMenu">
-            <li>
-              <router-link to="/">Home</router-link>
-            </li>
-            <li
-                v-for="(s, i) in sections"
-                @click="scrollToSection(s.id)" :key="i">
-              {{ s.title }}
-            </li>
-            <li>
-              <a href="/images/menu.png">Menu</a>
-            </li>
-            <li>
-              <a href="https://mister-monut.square.site/" target="_blank">Order Online</a>
-            </li>
-          </ul>
-        </nav>
-
 
     </nav>
 </template>
@@ -104,19 +87,20 @@ export default {
 @import '../styles/base.scss';
 
 .monut-nav {
+    color: $monut-tertiary-color;
+    background-color: $monut-primary-color;
     width: 100%;
     z-index: 100;
     position: fixed;
-    color: $monut-tertiary-color;
     font-size: $monut-text;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    padding: 0.5vh 1vw;
+    padding: 0.5vh 0;
 
     ul {
-      width: 90vw;
+      width: 100%;
       list-style-type: none;
       margin: 0;
       padding: 0 1vw;
@@ -134,8 +118,10 @@ export default {
 
   img {
     max-width: 47.75px;
+    margin-left: 3vw;
   }
 
+// back to top of page button
   &__up {
     cursor: pointer;
     position: fixed;
@@ -172,17 +158,15 @@ export default {
 
     &__bar {
       top: 0;
+      width: 100%;
+      margin: 1vh 0;
       background-color: $monut-primary-color;
-      border: 2px dashed $monut-secondary-color;
-      border-radius: 25px;
       display: inline-flex;
       flex-flow: row wrap;
       justify-content: center;
       align-items: center;
-      box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
 
       @media (max-width: 768px) {
-        width: 95vw;
         justify-content: space-between;
         align-items: center;
       }
@@ -205,7 +189,7 @@ export default {
         }
 
         &--active {
-          margin: 0.5em 1em 0;
+          margin: 0 0.5em 0.85em;
           width: 35px;
           height: auto;
           cursor: pointer;
@@ -225,25 +209,5 @@ export default {
         }
       }
     }
-
-  &__menu {
-    margin-right: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: $monut-primary-color;
-
-    &--close {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-
-      svg {
-        width: 50px;
-        padding-top: 2vh;
-        padding-right: 2vw;
-
-      }
-    }
   }
-}
 </style>

@@ -71,7 +71,7 @@ export default {
   }
 
   @media (min-width: 375px) {
-    width: 75vw;
+    width: 50vw;
     padding: 1em;
   }
 
@@ -81,6 +81,7 @@ export default {
   }
 
   button {
+    font-family: 'Old Standard TT', serif;
     width: 100%;
     cursor: pointer;
     background: $monut-black;
@@ -89,7 +90,6 @@ export default {
     border: 0;
     padding: 0;
     margin: 0;
-    font-family: 'Patrick Hand', serif;
     font-size: $monut-text;
     line-height: 1;
   }

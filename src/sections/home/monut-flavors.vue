@@ -1,29 +1,11 @@
 <template>
   <section id="menu" class="monut-flavors">
     <div class="centered-page">
-      <h1>Weekly Flavors</h1>
-      <div id="kroffle-cover"/>
-
-      <div class="monut-flavors__section centered-section">
-        <div class="monut-flavors__title">
-          <h2>🧇 Kroffles</h2>
-          <p>
-            <em>What is a <strong>kroffle</strong>?</em> <br>
-            A <a href="https://en.wikipedia.org/wiki/Croffle" target="_blank">kroffle</a> is a hybrid between a croissant and a waffle, originating from South Korea.
-          </p>
-        </div>
+      <div>
+        <h1>Weekly Flavors</h1>
+        <p><strong>*our flavors rotate weekly</strong></p>
+        <br/>
       </div>
-
-      <div class="monut-flavors__flavors">
-        <monut-card
-            v-for="(k, index) in kroffles" :key="index"
-            :image="imageSrc('kroffles', k.file)">
-          <template #title>
-            <h2>{{ k.name }}</h2>
-          </template>
-        </monut-card>
-      </div>
-
 
       <div id="monut-cover"/>
       <div class="monut-flavors__section centered-section">
@@ -44,6 +26,28 @@
             <h2>
               {{ m.name }}
             </h2>
+          </template>
+        </monut-card>
+      </div>
+
+      <div id="kroffle-cover"/>
+
+      <div class="monut-flavors__section centered-section">
+        <div class="monut-flavors__title">
+          <h2>🧇 Kroffles</h2>
+          <p>
+            <em>What is a <strong>kroffle</strong>?</em> <br>
+            A <a href="https://en.wikipedia.org/wiki/Croffle" target="_blank">kroffle</a> is a hybrid between a croissant and a waffle, originating from South Korea.
+          </p>
+        </div>
+      </div>
+
+      <div class="monut-flavors__flavors">
+        <monut-card
+            v-for="(k, index) in kroffles" :key="index"
+            :image="imageSrc('kroffles', k.file)">
+          <template #title>
+            <h2>{{ k.name }}</h2>
           </template>
         </monut-card>
       </div>

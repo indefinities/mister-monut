@@ -1,8 +1,9 @@
 @import './_variables';
 
 :root {
-    font-family: 'Patrick Hand', serif;
+    font-family: 'Old Standard TT', serif;
     background-color: $monut-primary-color;
+    text-transform: lowercase;
 }
 
 html, body, section {
