@@ -1,6 +1,6 @@
 <template>
   <div class="monut-footer">
-    <a href="mailto:nick@justkdog.com">📧 nick@justkdog.com</a>
+    <a href="mailto:hello@mistermonut.com">📧 hello@mistermonut.com</a>
     <p>🏪 873 Main Street, Waltham, MA</p>
     <a href="tel:781-893-1809">☎ (781) 893 - 1809</a>
     <p><em>mister monut</em> © {{ getCurrentYear }}</p>
