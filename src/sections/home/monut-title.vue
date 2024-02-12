@@ -3,7 +3,7 @@
     <div id="home-banner"/>
     <img src="/images/logo-text.svg" alt="Mister Monut logo"/>
     <monut-button url="https://mister-monut.square.site/">
-      🛍️ order online using square
+      🛍️ order online for pickup or delivery
     </monut-button>
     <monut-button url="https://mister-monut.square.site/s/gift-cards">
       🎁 purchase a gift card
