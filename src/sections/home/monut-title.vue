@@ -11,9 +11,6 @@
     <monut-button url="https://forms.gle/TC9CfFfYv1j4aRxb9">
       catering request form
     </monut-button>
-    <p>
-      <em>you will receive a 10% Visa gift card for any orders $150+!</em>
-    </p>
   </section>
 </template>
 
