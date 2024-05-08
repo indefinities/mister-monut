@@ -1,10 +1,30 @@
 <template>
   <section id="menu" class="monut-flavors">
     <div class="centered-page">
-      <div>
-        <h1>Weekly Flavors</h1>
-        <p><strong>*our flavors rotate weekly</strong></p>
-        <br/>
+
+      <div id="cookie-cover">
+        <img src="https://media.tenor.com/h8wC3_J4yh8AAAAi/new-post.gif"/>
+      </div>
+
+
+
+      <div class="monut-flavors__section centered-section">
+        <div class="monut-flavors__title">
+          <h2>🍪 Mochi Cookies</h2>
+            <h3> in collaboration with <img style="height: 30px;" src="/images/chewco.svg"/></h3>
+        </div>
+      </div>
+
+      <div class="monut-flavors__flavors">
+        <monut-card
+            v-for="(c, index) in cookies" :key="index"
+            :image="imageSrc('cookies', c.file)">
+          <template #title>
+            <h2>
+              {{ c.name }}
+            </h2>
+          </template>
+        </monut-card>
       </div>
 
       <div id="monut-cover"/>
@@ -69,6 +89,28 @@ export default {
   },
   data() {
     return {
+      cookies: [
+        {
+          name: 'Almond Delight',
+          file: 'almond'
+        },
+        {
+          name: 'Coconut Paradise',
+          file: 'coconut'
+        },
+        {
+          name: 'Matcha Pistachio',
+          file: 'matcha'
+        },
+        {
+          name: 'Oatmeal Raisin',
+          file: 'oatmeal'
+        },
+        {
+          name: 'Strawberry Shortcake',
+          file: 'strawberry'
+        },
+      ],
       kroffles: [
         {
           name: 'Banana Nutella',
@@ -160,6 +202,23 @@ export default {
 .monut-flavors {
   margin-top: 35vh;
   width: 100%;
+
+  #cookie-cover {
+    @include cover-img("/images/cookies/cover.jpg");
+
+    img {
+      height: 20%;
+      position: relative;
+      top: -5vh;
+      transform: rotate(-10deg);
+      border-radius: 25px;
+      background-color: lightpink;
+
+      @media (min-width: 768px) {
+        left: 15vw;
+      }
+    }
+  }
 
   #kroffle-cover {
     @include cover-img("/images/kroffles/cover.jpg");
