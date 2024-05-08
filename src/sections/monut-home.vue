@@ -7,8 +7,8 @@ import monutFlavors from "./home/monut-flavors.vue";
 <template>
   <section class="monut-home">
     <monut-title />
-    <monut-info />
     <monut-flavors />
+    <monut-info />
   </section>
 </template>
 
