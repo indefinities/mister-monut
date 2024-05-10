@@ -95,6 +95,10 @@ export default {
           file: 'almond'
         },
         {
+          name: 'Chocolate Chunk',
+          file: 'chocolate'
+        },
+        {
           name: 'Coconut Paradise',
           file: 'coconut'
         },
