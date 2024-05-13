@@ -1,5 +1,5 @@
 <template>
-  <section id="menu" class="monut-flavors">
+  <section id="menu" class="monut-flavors" data-aos="fade-up">
     <div class="centered-page">
 
       <div id="cookie-cover">
@@ -20,9 +20,9 @@
             v-for="(c, index) in cookies" :key="index"
             :image="imageSrc('cookies', c.file)">
           <template #title>
-            <h2>
+            <p>
               {{ c.name }}
-            </h2>
+            </p>
           </template>
         </monut-card>
       </div>
@@ -43,9 +43,9 @@
             v-for="(m, index) in monuts" :key="index"
             :image="imageSrc('monuts', m.file)">
           <template #title>
-            <h2>
+            <p>
               {{ m.name }}
-            </h2>
+            </p>
           </template>
         </monut-card>
       </div>
@@ -67,7 +67,7 @@
             v-for="(k, index) in kroffles" :key="index"
             :image="imageSrc('kroffles', k.file)">
           <template #title>
-            <h2>{{ k.name }}</h2>
+            <p>{{ k.name }}</p>
           </template>
         </monut-card>
       </div>
@@ -90,6 +90,10 @@ export default {
   data() {
     return {
       cookies: [
+        {
+          name: 'Plain',
+          file: 'plain'
+        },
         {
           name: 'Almond Delight',
           file: 'almond'
@@ -245,10 +249,10 @@ export default {
   }
 
   &__flavors {
-    margin: 0 5vw 25vh;
+    margin: 15vh 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
   }
 }
 </style>

@@ -28,15 +28,21 @@ export default {
 <style lang="scss">
 
 .monut-card {
-  width: 100%;
+  width: 45vw;
   height: fit-content;
-  margin: 1em;
+  margin: 1vh 0;
   border-radius: 10px;
   background-color: white;
   transition: box-shadow .3s;
 
-  @media screen and (min-width: 768px) {
-    width: 25vw;
+  @media (min-width: 768px) {
+    width: 30vw;
+  }
+
+  p {
+    font-size: 16pt;
+    line-height: 18pt;
+    text-align: center;
   }
 
   &:hover {

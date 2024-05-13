@@ -38,6 +38,7 @@ p {
     color: $monut-black;
     font-size: $monut-text;
     margin: 0;
+    line-height: calc($monut-text + 14pt);
 }
 
 .centered-page {
