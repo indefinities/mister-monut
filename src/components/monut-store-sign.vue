@@ -20,16 +20,12 @@ export default {
       businessHours: [
         {
           open: "8:00am",
-          close: "3:00pm"
+          close: "6:00pm"
         },
         {
           open: "7:30am",
           close: "7:00pm"
         },
-        {
-          open: "8:00am",
-          close: "5:00pm"
-        }
       ],
       daysOfWeek: []
     }
@@ -60,7 +56,7 @@ export default {
       },
       {
         day: "Sunday",
-        hours: this.businessHours[2]
+        hours: this.businessHours[0]
       }
     ]
   }
