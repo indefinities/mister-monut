@@ -15,5 +15,6 @@ import monutFlavors from "./home/monut-flavors.vue";
 <style lang="scss">
 .monut-home {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 </style>

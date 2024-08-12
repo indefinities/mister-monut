@@ -2,12 +2,12 @@
   <section class="monut-title" id="top" data-aos="fade-up">
     <div id="home-banner"/>
     <img src="/images/logo-text.svg" alt="Mister Monut logo"/>
-    <monut-button url="https://mister-monut.square.site/">
+    <!-- <monut-button url="https://mister-monut.square.site/">
       🛍️ order online for pickup or delivery
     </monut-button>
     <monut-button url="https://mister-monut.square.site/s/gift-cards">
       🎁 purchase a gift card
-    </monut-button>
+    </monut-button> -->
     <monut-button url="https://forms.gle/TC9CfFfYv1j4aRxb9">
       catering request form
     </monut-button>
@@ -28,8 +28,6 @@ export default {
 @import "../../styles/_base.scss";
 
 .monut-title {
-  padding: 6vh 0;
-  height: 100%;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
