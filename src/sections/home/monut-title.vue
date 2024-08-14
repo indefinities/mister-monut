@@ -2,15 +2,16 @@
   <section class="monut-title" id="top" data-aos="fade-up">
     <div id="home-banner"/>
     <img src="/images/logo-text.svg" alt="Mister Monut logo"/>
-    <!-- <monut-button url="https://mister-monut.square.site/">
+    <monut-button url="https://mister-monut.square.site/">
       🛍️ order online for pickup or delivery
     </monut-button>
-    <monut-button url="https://mister-monut.square.site/s/gift-cards">
+    <!-- <monut-button url="https://mister-monut.square.site/s/gift-cards">
       🎁 purchase a gift card
     </monut-button> -->
     <monut-button url="https://forms.gle/TC9CfFfYv1j4aRxb9">
       catering request form
     </monut-button>
+    <p>for catering questions and asisstance, please email <a :href="`mailto:${email}`" target="_blank">{{ email }}</a></p>
   </section>
 </template>
 
@@ -20,6 +21,11 @@ export default {
   name: "monut-title",
   components: {
     monutButton
+  },
+  data() {
+    return {
+      email: 'tau@mistermonut.com'
+    }
   }
 };
 </script>
