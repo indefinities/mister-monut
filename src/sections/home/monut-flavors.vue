@@ -10,8 +10,8 @@
 
       <div class="monut-flavors__section centered-section">
         <div class="monut-flavors__title">
-          <h2>🍪 Mochi Cookies</h2>
-            <h3> in collaboration with <img style="height: 30px;" src="/images/chewco.svg"/></h3>
+          <h2>🍪 Cookies</h2>
+            <!-- <h3> in collaboration with <img style="height: 30px;" src="/images/chewco.svg"/></h3> -->
         </div>
       </div>
 
@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import { Client, Environment } from "square";
+// import { Client, Environment } from "square";
 
 import {
   monutCard,
@@ -95,16 +95,12 @@ export default {
           file: 'plain'
         },
         {
-          name: 'Almond Delight',
-          file: 'almond'
+          name: 'Roasted Hazelnut',
+          file: 'hazelnut'
         },
         {
           name: 'Chocolate Chunk',
           file: 'chocolate'
-        },
-        {
-          name: 'Coconut Paradise',
-          file: 'coconut'
         },
         {
           name: 'Matcha Pistachio',
@@ -115,9 +111,9 @@ export default {
           file: 'oatmeal'
         },
         {
-          name: 'Strawberry Shortcake',
-          file: 'strawberry'
-        },
+          name: 'Oreo Lover',
+          file: 'oreo'
+        }
       ],
       kroffles: [
         {
