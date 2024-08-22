@@ -2,6 +2,7 @@
   <section class="monut-title" id="top" data-aos="fade-up">
     <div id="home-banner"/>
     <img src="/images/logo-text.svg" alt="Mister Monut logo"/>
+    <h3 style="margin: 0">Bakery & Bubble Tea</h3>
     <monut-button url="https://mister-monut.square.site/">
       🛍️ order online for pickup or delivery
     </monut-button>
