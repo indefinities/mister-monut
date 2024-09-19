@@ -42,8 +42,8 @@ export default {
 
   #home-banner {
     width: 100%;
-    height: 65vh;
-    background: center / cover no-repeat url("/images/cover.jpg");
+    height: 75vh;
+    background: center / cover no-repeat url("/images/cover.jpeg");
 
     @media (max-width: 768px) {
       height: 50vh;
