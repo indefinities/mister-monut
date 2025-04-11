@@ -3,16 +3,16 @@
     <div id="home-banner"/>
     <img src="/images/logo-text.svg" alt="Mister Monut logo"/>
     <h3 style="margin: 0">Bakery & Bubble Tea</h3>
-    <monut-button url="https://mister-monut.square.site/">
+    <monut-button url="https://peipeis-bakery.square.site/">
       🛍️ order online for pickup or delivery
     </monut-button>
     <!-- <monut-button url="https://mister-monut.square.site/s/gift-cards">
       🎁 purchase a gift card
     </monut-button> -->
-    <monut-button url="https://forms.gle/TC9CfFfYv1j4aRxb9">
+    <!-- <monut-button url="https://forms.gle/TC9CfFfYv1j4aRxb9">
       catering request form
-    </monut-button>
-    <p>for catering questions and asisstance, please email <a :href="`mailto:${email}`" target="_blank">{{ email }}</a></p>
+    </monut-button> -->
+    <p>for catering, questions and asisstance, please email <a :href="`mailto:${email}`" target="_blank">{{ email }}</a></p>
   </section>
 </template>
 
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      email: 'tau@mistermonut.com'
+      email: 'dengfengjiang77@gmail.com'
     }
   }
 };
