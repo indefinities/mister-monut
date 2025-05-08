@@ -5,12 +5,13 @@ import 'aos/dist/aos.css'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 import {
-    monutHome,
+    monutHome, monutSmithfield
 } from './sections/sections-export.js';
 
 
 const routes = [
     { path: '/', component: monutHome },
+    { path: '/smithfield', name: 'smithfield', component: monutSmithfield },
 ]
 
 const router = createRouter({

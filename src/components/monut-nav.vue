@@ -32,6 +32,11 @@
           <li>
             <a href="/images/menu.png">Menu</a>
           </li>
+          <li>
+            <router-link to="/smithfield">
+              Smithfield (new!)
+            </router-link>
+          </li>
         </ul>
       </div>
 

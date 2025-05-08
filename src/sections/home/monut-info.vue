@@ -16,7 +16,7 @@
         </div>
 
         <div class="monut-info__hours">
-          <monut-store-sign/>
+          <monut-store-sign :schedule="sched"/>
         </div>
 
         <div class="monut-info__insta">
@@ -27,7 +27,8 @@
   </section>
 </template>
 
-<script>
+<script lang="js">
+import schedules from '../../data/schedules.json';
 import {instagramEmbed, monutStoreSign} from "../../components/component-export.js";
 
 export default {
@@ -35,6 +36,11 @@ export default {
   components: {
     monutStoreSign,
     instagramEmbed,
+  },
+  data() {
+    return {
+      sched: schedules.waltham
+    }
   }
 }
 </script>

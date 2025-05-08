@@ -3,7 +3,7 @@
     <h2>🕚 Hours of Operation</h2>
 
     <div class="monut-store-sign__content">
-      <ul v-for="(d, i) in daysOfWeek" :key="i">
+      <ul v-for="(d, i) in schedule" :key="i">
         <li>
           <p>{{ d.day }} — {{d.hours ? `${d.hours.open} to ${d.hours.close}` : 'closed'}}</p>
         </li>
@@ -15,54 +15,12 @@
 <script>
 export default {
   name: "monut-store-sign",
-  data() {
-    return {
-      businessHours: [
-        {
-          open: "8:00am",
-          close: "6:00pm"
-        },
-        {
-          open: "7:30am",
-          close: "7:00pm"
-        },
-        {
-          open: "8:00am",
-          close: "5:00pm"
-        },
-      ],
-      daysOfWeek: []
+  props: {
+    schedule: {
+      type: Array,
+      required: true,
+      default: []
     }
-  },
-  mounted() {
-    this.daysOfWeek = [
-      {
-        day: "Monday",
-      },
-      {
-        day: "Tuesday"
-      },
-      {
-        day: "Wednesday",
-        hours: this.businessHours[0]
-      },
-      {
-        day: "Thursday",
-        hours: this.businessHours[0]
-      },
-      {
-        day: "Friday",
-        hours: this.businessHours[1]
-      },
-      {
-        day: "Saturday",
-        hours: this.businessHours[1]
-      },
-      {
-        day: "Sunday",
-        hours: this.businessHours[2]
-      }
-    ]
   }
 }
 </script>

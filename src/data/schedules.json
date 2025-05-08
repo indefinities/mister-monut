@@ -1,0 +1,96 @@
+{
+    "waltham": [
+            {
+                "day": "Monday"
+            },
+            {
+                "day": "Tuesday"
+            },
+            {
+                "day": "Wednesday",
+                "hours": {
+                    "open": "8:00am",
+                    "close": "6:00pm"
+                }
+            },
+            {
+                "day": "Thursday",
+                "hours": {
+                    "open": "8:00am",
+                    "close": "6:00pm"
+                }
+            },
+            {
+                "day": "Friday",
+                "hours": {
+                    "open": "7:30am",
+                    "close": "7:00pm"
+                }
+            },
+            {
+                "day": "Saturday",
+                "hours": {
+                    "open": "7:30am",
+                    "close": "7:00pm"
+                }
+            },
+            {
+                "day": "Sunday",
+                "hours": {
+                    "open": "7:30am",
+                    "close": "7:00pm"
+                }
+            }
+    ],
+    "smithfield": [
+        {
+            "day": "Monday",
+            "hours": {
+                "open": "11:00am",
+                "close": "8:00pm"
+            }
+        },
+        {
+            "day": "Tuesday",
+            "hours": {
+                "open": "11:00am",
+                "close": "8:00pm"
+            }
+        },
+        {
+            "day": "Wednesday",
+            "hours": {
+                "open": "11:00am",
+                "close": "8:00pm"
+            }
+        },
+        {
+            "day": "Thursday",
+            "hours": {
+                "open": "11:00am",
+                "close": "8:00pm"
+            }
+        },
+        {
+            "day": "Friday",
+            "hours": {
+                "open": "11:00am",
+                "close": "9:00pm"
+            }
+        },
+        {
+            "day": "Saturday",
+            "hours": {
+                "open": "11:00am",
+                "close": "9:00pm"
+            }
+        },
+        {
+            "day": "Sunday",
+            "hours": {
+                "open": "11:00am",
+                "close": "8:00pm"
+            }
+        }
+    ]
+}
