@@ -12,12 +12,14 @@ html, body, section {
 }
 
 a {
+    width: fit-content;
     color: $monut-tertiary-color;
     text-decoration: none;
     font-size: $monut-text;
 }
 
 h1 {
+    width: fit-content;
     color: $monut-black;
     font-size: $monut-h1;
     margin: 0;
@@ -35,18 +37,20 @@ h3 {
 }
 
 p {
+    width: fit-content;
     color: $monut-black;
     font-size: $monut-text;
     margin: 0;
     line-height: calc($monut-text + 14pt);
 }
 
+
 .centered-page {
-    width: 100%;
-    display: inline-flex;
+    width: 95%;
+    display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 .centered-section {

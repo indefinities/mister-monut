@@ -11,7 +11,7 @@ import {
 
 const routes = [
     { path: '/', component: monutHome },
-    { path: '/smithfield', name: 'smithfield', component: monutSmithfield },
+    { path: '/smithfield', component: monutSmithfield },
 ]
 
 const router = createRouter({

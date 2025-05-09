@@ -1,15 +1,27 @@
-<script setup>
+<template>
+    <monut-nav :is-mobile="isMobile" />
+    <router-view />
+    <monut-footer />
+</template>
+
+<script lang="js">
 import {
   monutFooter,
   monutNav,
 } from './components/component-export';
-</script>
 
-<template>
-  <monut-nav />
-    <router-view />
-  <monut-footer />
-</template>
+export default {
+  components: {
+    monutNav,
+    monutFooter
+  },
+  computed: {
+    isMobile() {
+      return window.innerWidth < 768;
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 @import './styles/base.scss';

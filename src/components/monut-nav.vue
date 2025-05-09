@@ -1,73 +1,73 @@
 <template>
-    <nav class="monut-nav">
-<!--      scroll to top button-->
-      <div class="monut-nav__up" @click="scrollToSection('top')"/>
+  <nav class="monut-nav">
+    <!--      scroll to top button-->
+    <div class="monut-nav__up" @click="scrollToSection('top')" />
 
-        <nav v-if="isMobile" class="monut-nav__bar">
-          <img src="/images/logo.svg"/>
-          <div :class="`monut-nav__bar--menu${ openMenu ? '--active' : '' }`"
-              @click="drawerActions()"
-              aria-label="The hamburger menu button.">
-            <div v-for="index in (openMenu ? 2 : 3)"
-                 :key="index"
-                 class="monut-nav__bar--menu--bar"
-                 :style="{top: openMenu ? '' : `${10*(index - 1)}px`}"/>
-          </div>
-        </nav>
-
-      <div v-if="!isMobile || openMenu">
-        <ul
-            :class="!isMobile ? 'monut-nav__bar' : ''"
-            :style="isMobile ? { paddingBottom: '4vh'} : {}">
-          <li>
-            <router-link to="/">
-              Home
-            </router-link>
-          </li>
-          <li
-              v-for="(s, i) in sections"
-              @click="scrollToSection(s.id)" :key="i">
-            {{ s.title }}
-          </li>
-          <li>
-            <a href="/images/menu.png">Menu</a>
-          </li>
-          <li>
-            <router-link to="/smithfield">
-              Smithfield (new!)
-            </router-link>
-          </li>
-        </ul>
+    <nav v-if="isMobile" class="monut-nav__bar">
+      <div :class="{
+        'monut-nav__bar--menu': true,
+        'monut-nav__bar--menu--active': openMenu
+      }" @click="drawerActions()" aria-label="The hamburger menu button.">
+        <div v-for="index in (openMenu ? 2 : 3)" :key="index" class="monut-nav__bar--menu--bar"
+          :style="{ top: !openMenu ? `${10 * (index) - 8}px` : 0 }" />
       </div>
-
     </nav>
+
+    <div v-if="!isMobile || openMenu">
+      <ul :class="!isMobile ? 'monut-nav__bar' : ''" :style="isMobile ? { paddingBottom: '4vh' } : {}">
+        <li @click="drawerActions()">
+          <router-link to="/">
+            Home
+          </router-link>
+        </li>
+        <li v-for="(s, i) in sections" @click="scrollToSection(s.id)" :key="i">
+          {{ s.title }}
+        </li>
+        <li>
+          <a href="/images/menu.png">Menu</a>
+        </li>
+        <li @click="drawerActions()">
+          <router-link to="/smithfield">
+            Smithfield (new!)
+          </router-link>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
 </template>
 
 <script lang="js">
 export default {
-    name: 'monut-nav',
-    data() {
-        return {
-            openMenu: false,
-            isMobile: false,
-            sections: [
-                  {
-                      title:'Info',
-                      id: 'info',
-                  },
-                  {
-                      title:'Products',
-                      id: 'menu',
-                  },
-              ]
-        }
-    },
+  name: 'monut-nav',
+  data() {
+    return {
+      openMenu: false,
+      sections: [
+        {
+          title: 'Info',
+          id: 'info',
+        },
+        {
+          title: 'Products',
+          id: 'menu',
+        },
+      ]
+    }
+  },
+  props: {
+    isMobile: {
+      type: Boolean,
+      required: true,
+      default: false
+    }
+  },
   methods: {
     /**
      * Opens or closes the menu depending on the state of the menu.
      */
     drawerActions() {
-        this.openMenu = !this.openMenu;
+      this.openMenu = !this.openMenu;
     },
 
     /**
@@ -75,58 +75,55 @@ export default {
      * @param id
      */
     scrollToSection(id) {
+      this.drawerActions();
       const element = document.getElementById(id);
       element.scrollIntoView({
-        behavior:'smooth',
+        behavior: 'smooth',
       });
-    }
+    },
   },
-  mounted() {
-    // Checks if the window is on a mobile device when mounted
-    this.isMobile = window.matchMedia('(max-width: 768px)').matches;
-  }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../styles/base.scss';
 
 .monut-nav {
-    color: $monut-tertiary-color;
-    background-color: $monut-primary-color;
+  color: $monut-tertiary-color;
+  background-color: $monut-primary-color;
+  width: 100%;
+  z-index: 40;
+  position: fixed;
+  font-size: $monut-text;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5vh 0;
+
+  ul {
     width: 100%;
-    z-index: 100;
-    position: fixed;
-    font-size: $monut-text;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5vh 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 1vw;
+    overflow: hidden;
 
-    ul {
-      width: 100%;
-      list-style-type: none;
-      margin: 0;
-      padding: 0 1vw;
-      overflow: hidden;
+    li {
+      cursor: pointer;
+      margin: 1vh 1vw;
 
-      li {
-        cursor: pointer;
-        margin: 1vh 1vw;
-
-        &:hover {
-          text-decoration: underline dotted;
-        }
+      &:hover {
+        text-decoration: underline dotted;
       }
     }
+  }
 
   img {
     max-width: 47.75px;
     margin-left: 3vw;
   }
 
-// back to top of page button
+  // back to top of page button
   &__up {
     cursor: pointer;
     position: fixed;
@@ -161,58 +158,58 @@ export default {
     }
   }
 
-    &__bar {
-      top: 0;
-      width: 100%;
-      margin: 1vh 0;
-      background-color: $monut-primary-color;
-      display: inline-flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: center;
+  &__bar {
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    margin: 1rem 0;
+    background-color: $monut-primary-color;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 
-      @media (max-width: 768px) {
-        justify-content: space-between;
-        align-items: center;
+    @media (max-width: 768px) {
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &--menu {
+      margin-right: 5vw;
+      margin-bottom: 3vh;
+      width: 35px;
+      height: auto;
+      cursor: pointer;
+      position: relative;
+
+      &--bar {
+        background-color: $monut-tertiary-color;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        transition: all 0.5s;
       }
 
-      &--menu {
-        margin-right: 5vw;
-        margin-bottom: 3vh;
+      &--active {
+        margin: 0 0.5em 0.85em;
         width: 35px;
         height: auto;
         cursor: pointer;
         position: relative;
 
-        &--bar {
-          background-color: $monut-tertiary-color;
-          position: absolute;
-          width: 100%;
-          height: 5px;
+        > :first-child {
+          top: 10px;
           left: 0;
-          transition: all 0.5s;
+          transform: rotate(45deg);
         }
 
-        &--active {
-          margin: 0 0.5em 0.85em;
-          width: 35px;
-          height: auto;
-          cursor: pointer;
-          position: relative;
-
-          > :first-child {
-            top: 10px;
-            left: 0;
-            transform: rotate(45deg);
-          }
-
-          > :nth-child(2) {
-            top: 10px;
-            left: 0;
-            transform: rotate(-45deg);
-          }
+        > :nth-child(2) {
+          top: 10px;
+          left: 0;
+          transform: rotate(-45deg);
         }
       }
     }
   }
+}
 </style>

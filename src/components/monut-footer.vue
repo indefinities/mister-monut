@@ -1,24 +1,15 @@
 <template>
   <div class="monut-footer">
     <a href="mailto:tau@mistermonut.com">📧 tau@mistermonut.com</a>
-    <p>🏪 873 Main Street, Waltham, MA</p>
-    <a href="tel:781-893-1809">☎ (781) 893 - 1809</a>
-    <p><em>mister monut</em> © {{ getCurrentYear }}</p>
+    <p>1201 Douglas Pike, Smithfield, RI 02917</p>
+    <a href="tel:+14012310202">☎ +1 (401) 231 - 0202</a>
+    <p>mister monut © 2025</p>
   </div>
 </template>
 
 <script>
 export default {
   name: "monut-footer",
-  computed: {
-    /**
-     * Gets the current year
-     * @returns {number}
-     */
-    getCurrentYear() {
-      return new Date().getFullYear();
-    }
-  }
 }
 </script>
 
@@ -33,6 +24,7 @@ export default {
 
 
   a, p {
+    width: 100%;
     color: $monut-primary-color;
   }
 }

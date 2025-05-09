@@ -1,14 +1,14 @@
 <template>
-  <div class="monut-store-sign">
-    <h2>🕚 Hours of Operation</h2>
+  <div class="monut-store-sign centered-page">
+    <div>
+      <h2>Hours of Operation 🕚</h2>
 
-    <div class="monut-store-sign__content">
-      <ul v-for="(d, i) in schedule" :key="i">
-        <li>
-          <p>{{ d.day }} — {{d.hours ? `${d.hours.open} to ${d.hours.close}` : 'closed'}}</p>
-        </li>
-      </ul>
+      <div class="monut-store-sign__content">
+        <p v-for="(d, i) in schedule" :key="i">{{ d.day }} — {{ d.hours ? `${d.hours.open} to ${d.hours.close}` :
+          'closed' }}</p>
+      </div>
     </div>
+
   </div>
 </template>
 
@@ -29,7 +29,6 @@ export default {
 @import "../styles/_base";
 
 .monut-store-sign {
-  width: 100%;
   text-align: center;
 
   @media (max-width: 765px) {
@@ -38,13 +37,13 @@ export default {
     }
   }
 
-  ul {
-    list-style-type: none;
-    margin: 1vh 0;
-    padding: 0;
+  h2 {
+    width: fit-content;
   }
 
+
   &__content {
+    width: fit-content;
     margin: 3vh 0;
   }
 }
