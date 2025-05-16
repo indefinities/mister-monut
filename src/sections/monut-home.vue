@@ -1,7 +1,7 @@
 <script setup>
-import monutTitle from "./home/monut-title.vue";
-import monutInfo from "./home/monut-info.vue";
-import monutFlavors from "./home/monut-flavors.vue";
+import monutTitle from "./monut-title.vue";
+import monutInfo from "./monut-info.vue";
+import monutFlavors from "./monut-flavors.vue";
 </script>
 
 <template>
@@ -13,8 +13,4 @@ import monutFlavors from "./home/monut-flavors.vue";
 </template>
 
 <style lang="scss">
-.monut-home {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
 </style>

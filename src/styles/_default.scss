@@ -46,7 +46,7 @@ p {
 
 
 .centered-page {
-    width: 95%;
+    max-width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

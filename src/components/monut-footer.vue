@@ -1,8 +1,8 @@
 <template>
   <div class="monut-footer">
-    <a href="mailto:tau@mistermonut.com">📧 tau@mistermonut.com</a>
-    <p>1201 Douglas Pike, Smithfield, RI 02917</p>
-    <a href="tel:+14012310202">☎ +1 (401) 231 - 0202</a>
+    <a href="mailto:dengfengjiang77@gmail.com">📧 dengfengjiang77@gmail.com</a>
+    <p>873 Main Street, Waltham, MA</p>
+    <a href="tel:+17818931809">☎ +1 (781) 893 - 1809</a>
     <p>mister monut © 2025</p>
   </div>
 </template>

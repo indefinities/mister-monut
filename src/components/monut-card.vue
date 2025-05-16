@@ -28,7 +28,7 @@ export default {
 <style lang="scss">
 
 .monut-card {
-  width: 45vw;
+  width: 45%;
   height: fit-content;
   margin: 1vh 0;
   border-radius: 10px;
@@ -36,7 +36,7 @@ export default {
   transition: box-shadow .3s;
 
   @media (min-width: 768px) {
-    width: 30vw;
+    width: 20vw;
   }
 
   p {

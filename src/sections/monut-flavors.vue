@@ -2,31 +2,6 @@
   <section id="menu" class="monut-flavors" data-aos="fade-up">
     <div class="centered-page">
 
-      <div id="cookie-cover">
-        <img src="https://media.tenor.com/h8wC3_J4yh8AAAAi/new-post.gif"/>
-      </div>
-
-
-
-      <div class="monut-flavors__section centered-section">
-        <div class="monut-flavors__title">
-          <h2>🍪 Cookies</h2>
-            <!-- <h3> in collaboration with <img style="height: 30px;" src="/images/chewco.svg"/></h3> -->
-        </div>
-      </div>
-
-      <div class="monut-flavors__flavors">
-        <monut-card
-            v-for="(c, index) in cookies" :key="index"
-            :image="imageSrc('cookies', c.file)">
-          <template #title>
-            <p>
-              {{ c.name }}
-            </p>
-          </template>
-        </monut-card>
-      </div>
-
       <div id="monut-cover"/>
       <div class="monut-flavors__section centered-section">
         <div class="monut-flavors__title">
@@ -80,7 +55,7 @@
 
 import {
   monutCard,
-} from '../../components/component-export.js'
+} from '../components/component-export.js'
 
 export default {
   name: 'monut-flavors',
@@ -201,34 +176,18 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../styles/_base.scss";
+@import "../styles/_base.scss";
 
 .monut-flavors {
   margin-top: 35vh;
   width: 100%;
-
-  #cookie-cover {
-    @include cover-img("/images/cookies/cover.jpg");
-
-    img {
-      height: 20%;
-      position: relative;
-      top: -5vh;
-      transform: rotate(-10deg);
-      border-radius: 25px;
-      background-color: lightpink;
-
-      @media (min-width: 768px) {
-        left: 15vw;
-      }
-    }
-  }
 
   #kroffle-cover {
     @include cover-img("/images/kroffles/cover.jpg");
   }
 
   #monut-cover {
+    margin: auto;
     @include cover-img("/images/monuts/cover.jpg");
   }
 
@@ -245,10 +204,16 @@ export default {
   }
 
   &__flavors {
+    width: 100%;
     margin: 15vh 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 15px;
+
+    @media (min-width: 768px) {
+        width: 80%;
+    }
   }
 }
 </style>

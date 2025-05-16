@@ -28,8 +28,8 @@
 </template>
 
 <script lang="js">
-import schedules from '../../data/schedules.json';
-import {instagramEmbed, monutStoreSign} from "../../components/component-export.js";
+import schedules from '../data/schedules.json';
+import {instagramEmbed, monutStoreSign} from "../components/component-export.js";
 
 export default {
   name: 'monut-info',
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../styles/base";
+@import "../styles/base";
 
 .monut-info {
   &__insta {
