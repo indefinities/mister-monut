@@ -3,7 +3,14 @@
         <div class="centered-page">
             <h1> Welcome to Smithfield, Rhode Island! </h1>
             <img style="width: 100%;" src="/images/smithfield-cover.jpeg" />
-            <div>
+            <div class="centered-section order-online">
+                <p>order online for pickup or deliery:</p>
+                <monut-button url="https://mister-monut-smithfield.square.site/">
+                    ➡️ check out our square site!
+                </monut-button>
+            </div>
+
+            <div class="centered-section">
                 <h1>find us at:</h1>
                 <div style="margin-bottom: 2rem;">
                     <p>1201 Douglas Pike <br />
@@ -25,12 +32,13 @@
 
 <script lang="js">
 import schedules from '../data/schedules.json';
-import { monutStoreSign } from "../components/component-export.js";
+import { monutStoreSign, monutButton } from "../components/component-export.js";
 
 export default {
     name: "monut-smithfield",
     components: {
-        monutStoreSign
+        monutButton,
+        monutStoreSign,
     },
     data() {
         return {
@@ -45,5 +53,15 @@ export default {
     margin: 0 2rem;
     overflow-x: clip;
     padding-top: 10vh;
+
+    .order-online {
+        text-align: center;
+        border-radius: 25px;
+        border: 1px dashed black;
+        padding: 4em 1em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
 }
 </style>

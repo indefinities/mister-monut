@@ -5,6 +5,7 @@
     <h3 style="text-align: center; margin: 0">(New Ownership) Bakery, Cafe, and Bubble Tea</h3>
     <div class="monut-title__actions">
       <div>
+        <p>waltham location</p>
         <monut-button url="https://peipeis-bakery.square.site/">
           🛍️ order online for pickup or delivery
         </monut-button>
@@ -19,8 +20,12 @@
       </div>
 
       <div>
+        <p>Smithfield Location</p>
         <monut-button route="/smithfield">
           check out our new smithfield location!
+        </monut-button>
+        <monut-button url="https://mister-monut-smithfield.square.site/">
+          🛍️ order online for pickup or delivery
         </monut-button>
       </div>
     </div>
@@ -64,7 +69,7 @@ export default {
 
   &__logo {
     margin: 15px 5vw;
-    width: 25vw;
+    width: 250px;
   }
 
   .monut-button {
