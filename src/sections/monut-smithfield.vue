@@ -15,7 +15,7 @@
                 <div style="margin-bottom: 2rem;">
                     <p>1201 Douglas Pike <br />
                         Smithfield, RI 02917</p>
-                    <a href="tel:+14012310202">☎ +1 (401) 231 - 0202</a>
+                    <a href="tel:+14017570725">☎ +1 (401) 757 - 0725</a>
                 </div>
 
                 <iframe
