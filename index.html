@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="An Asian-inspired dessert bakery & cafe based in Waltham, MA." />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico"/>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Old+Standard+TT">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.ico" />
     <title>mister monut</title>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9MFPH5QYDK"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
+<body>
+    <div
+        class="bg-[url('./images/monut.svg')] bg-red-200 bg-blend-hard-light bg-size-[100px] w-screen h-screen grid grid-cols-1 grid-rows-1 place-items-center">
+        <div class="fade-in-down p-8 mx-6 place-self-center text-center bg-orange-100 rounded-lg shadow-xl/20">
+            <h1 class="mb-4 text-3xl font-bold uppercase">
+                🚧 This page is under construction 🚧
+            </h1>
+            <p class="text-xl">
+                Please check out our Rhode Island location webiste ➡️
+                <a class="font-bold underline text-rose-800"
+                    href="https://mistermonutri.com">https://mistermonutri.com</a>
+            </p>
+        </div>
+    </div>
+</body>
 
-    function gtag() {
-        dataLayer.push(arguments);
+</html>
+
+<style>
+.fade-in-down {
+    /* Initial state (hidden and moved up) */
+    opacity: 0;
+    transform: translateY(-20px);
+
+    /* Animation properties */
+    animation: fadeInDown 1s ease-out forwards;
+}
+
+/* Keyframes definition */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
-    gtag('js', new Date());
-
-    gtag('config', 'G-9MFPH5QYDK');
-</script>
-
-<body>
-<div id="app" />
-<script type="module" src="/src/main.js"></script>
-</body>
-</html>
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
